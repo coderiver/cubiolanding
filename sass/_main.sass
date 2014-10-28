@@ -16,6 +16,8 @@
 	-o-background-size: cover 
 	background-size: cover  
 	position: relative
+	.b-client &
+		background: #F8FCFD url(../img/bank.jpg) no-repeat 50% 100%
 	.start__links
 		position: absolute
 		right: 0
@@ -37,6 +39,9 @@
 			margin-left: 14px 
 			+asemi 
 			+gh(#1DB6B3,#343959)
+			.b-client &
+				+gh(#EA284C, #363657)
+				border-color: #EA284C 
 	.logo
 		position: absolute
 		left: 0
@@ -48,15 +53,20 @@
 		font-size: 20px 
 		text-transform: uppercase
 		color: #fff 
+
 		i
 			display: inline-block
 			+svg(logo,45,40)
 			vertical-align: middle
 			margin-right: 10px 
+			.b-client &
+				+svg(logodark,45,40)
 		strong
 			color: #F7CE67
 			font-weight: normal
 			+pbold
+			.b-client &
+				color: #343556 
 	.start__bottom
 		position: absolute
 		left: 0
@@ -102,6 +112,9 @@
 	margin: 0 auto 
 	padding-top: 200px 
 	text-align: center
+	.b-client &
+		.form
+			margin-top: 75px 
 	h2
 		font-weight: normal
 		+pbold
@@ -138,10 +151,12 @@
 		margin-right: 10px 
 		vertical-align: middle
 		background: rgba(#fff,.5) 
+		.b-client &
+			border-color: #EA284C 
 		+placeholder
 			font-size: 16px 
 			color: #4D4D67 
-			
+	
 	.form__submit
 		height: 60px 
 		border: 2px solid #1DB6B3 
@@ -158,6 +173,9 @@
 		display: inline-block
 		line-height: 60px 
 		vertical-align: middle
+		.b-client &
+			border-color: #EA284C 
+			+gh(#EA284C, #363657)
 
   
 
@@ -210,8 +228,36 @@
 		display: inline-block
 		+svg(a-#{$s}, 100, 100)
 
-
-
+.your
+	background: #353556 
+	text-align: center
+	.in
+		height: 100vh 
+		position: relative
+		.your__text
+			position: absolute
+			bottom: 430px 
+			left: 50%
+			width: 1000px 
+			margin-left: -500px  
+			
+		h2
+			color: #F8CF5E
+			font-size: 45px  
+			font-weight: normal
+			+asemi
+			text-align: center
+		p
+			font-size: 25px 
+			line-height: 1.5 
+			color: #fff 
+	.your__pic
+		position: absolute
+		left: 50%
+		bottom: 0
+		margin-left: -510px   
+		img
+			display: block
 .scr
 	height: 100vh
 	min-height: 720px 
