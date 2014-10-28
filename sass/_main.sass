@@ -1,7 +1,307 @@
 // Normally mainpage styles
 
+%in
+	width: 1180px 
+	margin: 0 auto
+.in
+	@extend %in
+	position: relative
 
 
+.start
+	height: 100vh
+	min-height: 760px 
+	background: url(../img/start.jpg) no-repeat 50% 50%
+	-webkit-background-size: cover 
+	-o-background-size: cover 
+	background-size: cover  
+	position: relative
+	.start__links
+		position: absolute
+		right: 0
+		top: 10px  
+		text-align: right
+		a
+			font-size: 15px 
+			text-transform: uppercase
+			text-decoration: none
+			letter-spacing: 2px 
+			display: inline-block
+			color: #fff 
+			padding: 15px 18px
+			vertical-align: middle
+			
+		.start__signup
+			border: 2px solid #1DB6B3 
+			border-radius: 2px
+			margin-left: 14px 
+			+asemi 
+			+gh(#1DB6B3,#343959)
+	.logo
+		position: absolute
+		left: 0
+		top: 17px  
+		+preg
+		text-decoration: none
+		cursor: pointer
+		letter-spacing: 3px  
+		font-size: 20px 
+		text-transform: uppercase
+		color: #fff 
+		i
+			display: inline-block
+			+svg(logo,45,40)
+			vertical-align: middle
+			margin-right: 10px 
+		strong
+			color: #F7CE67
+			font-weight: normal
+			+pbold
+	.start__bottom
+		position: absolute
+		left: 0
+		bottom: 0
+		right: 0
+		background: #353556    
+		height: 70px 
+	.start__bottomlinks
+		float: left
+		height: 70px
+		line-height: 70px
+		color: #fff   
+		list-style: none
+		li
+			float: left
+		a
+			float: left
+			font-size: 15px 
+			color: #fff 
+			text-decoration: none
+			margin-right: 31px 
+		&.is-right
+			float: right
+			a
+				margin-right: 0
+				margin-left: 31px  
+	.start__gonext
+		position: absolute
+		left: 50%
+		top: 15px  
+		margin-left: -20px 
+		+svg(arrow,40,40)
+		cursor: pointer
+		-webkit-background-size: contain 
+		-o-background-size: contain 
+		background-size: contain 
+		+transition(all .2s ease-in)
+		&:hover
+			top: 15px + 4px 
+
+.now
+	width: 720px 
+	margin: 0 auto 
+	padding-top: 200px 
+	text-align: center
+	h2
+		font-weight: normal
+		+pbold
+		font-size: 46px 
+		color: #2A2946
+		text-transform: uppercase
+	p
+		+amed
+		font-size: 22px 
+		color: #353659
+		line-height: 1.5  
+		margin-bottom: 18px 
+	.now__cube
+		+svg(cube, 116,100)
+		display: inline-block
+		-webkit-background-size: contain 
+		-o-background-size: contain 
+		background-size: contain 
+		margin-bottom: 20px 
+.form
+	font-size: 0 
+	.form__input
+		border: 2px solid #1DB6B3 
+		width: 346px 
+		height: 64px 
+		// +box
+		font-size: 16px 
+		padding-top: 0px 
+		line-height: normal
+		padding-left: 15px 
+		padding-right: 15px 
+		+areg
+		+box
+		margin-right: 10px 
+		vertical-align: middle
+		background: rgba(#fff,.5) 
+		+placeholder
+			font-size: 16px 
+			color: #4D4D67 
+			
+	.form__submit
+		height: 60px 
+		border: 2px solid #1DB6B3 
+		border-radius: 2px
+		width: 350px 
+		text-align: center
+		+gh(#1DB6B3, #343858)
+		letter-spacing: 3px 
+		color: #fff 
+		text-transform: uppercase
+		cursor: pointer
+		font-size: 17px 
+		+asemi
+		display: inline-block
+		line-height: 60px 
+		vertical-align: middle
+
+  
+
+
+.adv
+	background: #353556 
+	height: 100vh 
+	min-height: 760px 
+	h2
+		font-size: 42px 
+		padding-top: 20px  
+		font-weight: normal
+		+asemi
+		color: #FFFFFF
+		text-align: center 
+		margin-bottom: 57px 
+	ul
+		list-style: none
+		li
+			display: inline-block
+			width: 40%
+			text-align: center
+			vertical-align: top
+			margin-bottom: 60px 
+			&.spaceme
+				margin-right: 160px 
+		h3
+			font-weight: normal
+			color: #FFFFFF 
+			+asemi
+			font-size: 21px 
+			margin-bottom: 18px 
+			margin-top: 16px 
+		p
+			font-size: 17px 
+			+areg
+			color: #FFFFFF 
+			line-height: 1.3 
+			max-width: 346px 
+			margin: 0 auto 
+			
+		.adv__icon
+			-webkit-background-size: contain 
+			-o-background-size: contain 
+			background-size: contain 
+		
+
+@each $s in tools,globe,volatility, zero
+	.icon-#{$s}
+		display: inline-block
+		+svg(a-#{$s}, 100, 100)
+
+
+
+.scr
+	height: 100vh
+	min-height: 720px 
+	background: #F8F8F8 
+	.in
+		+clr
+		padding-top: 85px 
+	.scr__pic
+		float: left
+	.scr__text
+		float: right
+		width: 514px 
+		padding-top: 200px 
+		font-size: 22px 
+		+areg
+		line-height: 1.3 
+		h2
+			font-weight: normal
+			font-size: 42px 
+			+asemi
+			color: #353458 
+			line-height: 1.3 
+			margin-bottom: 38px 
+
+@each $s in api,cart,button
+	.icon-#{$s}
+		display: inline-block
+		+svg(s-#{$s}, 130, 130)
+.solutions
+	background: #fff 
+	.in
+		padding: 61px 0 85px
+		+clr
+	h2
+		font-weight: normal
+		+asemi
+		font-size: 42px 
+		color: #353458
+		text-align: center
+		margin-bottom: 68px 
+	.solutions__item
+		float: left
+		text-align: center
+		width: 33% - 2*3%
+		padding: 0 3% 
+		font-size: 17px 
+		color: #353458
+		line-height: 1.3  
+		h3
+			font-size: 21px 
+			font-weight: normal
+			+asemi
+			margin: 20px 0 
+			color: #353458 
+.bottom
+	background: url(../img/bottom.jpg) no-repeat 50% 50%
+	-webkit-background-size: cover 
+	-o-background-size: cover 
+	background-size: cover 
+	height: 100vh
+	min-height: 700px
+	.in
+		height: 100vh
+		min-height: 700px
+	.getstarted
+		background: rgba(#F9FCFD, .8) 
+		width: 1000px - 46px
+		position: absolute
+		left: 50%
+		top: 50% 
+		margin-left: -500px  
+		margin-top: -120px 
+		text-align: center
+		padding: 13px 0  23px 0
+		h3
+			font-size: 36px 
+			color: #353558
+			font-weight: normal
+			margin-bottom: 29px 
+			+amed
+
+		  
+
+footer
+	background: #F9FCFD 
+	font-size: 21px  
+	color: #455473 
+	padding: 75px 0
+	text-align: center 
+	
 
 
 

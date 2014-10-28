@@ -18,9 +18,98 @@ ul, ol { list-style-type: none; }
 @media only screen and (min-device-width: 320px) and (max-device-width: 480px) { * { -webkit-text-size-adjust: none; } }
 table { border-spacing: 0; border-collapse: collapse; width: 100%; }
 
-body { font-family: Arial, sans-serif; font-size: 12px; line-height: 1.4; }
+@font-face { font-family: proxima; src: url("fonts/proximanova-regular-webfont.eot"); src: url("fonts/proximanova-regular-webfont.eot?#iefix") format("embedded-opentype"), url("fonts/proximanova-regular-webfont.woff") format("woff"), url("fonts/proximanova-regular-webfont.ttf") format("truetype"); font-weight: normal; font-style: normal; }
 
-.l { *zoom: 1; }
-.l:after { content: " "; display: table; clear: both; }
-.l .l-col1 { float: left; width: 20%; }
-.l .l-col2 { float: right; width: 70%; }
+@font-face { font-family: bold; src: url("fonts/proximanova-bold-webfont.eot"); src: url("fonts/proximanova-bold-webfont.eot?#iefix") format("embedded-opentype"), url("fonts/proximanova-bold-webfont.woff") format("woff"), url("fonts/proximanova-bold-webfont.ttf") format("truetype"); font-weight: normal; font-style: normal; }
+
+@font-face { font-family: areg; src: url("fonts/AvenirNext-Regular.eot"); src: url("fonts/AvenirNext-Regular.eot?#iefix") format("embedded-opentype"), url("fonts/AvenirNext-Regular.woff") format("woff"), url("fonts/AvenirNext-Regular.ttf") format("truetype"); font-weight: normal; font-style: normal; }
+
+@font-face { font-family: alite; src: url("fonts/AvenirNext-UltraLight.eot"); src: url("fonts/AvenirNext-UltraLight.eot?#iefix") format("embedded-opentype"), url("fonts/AvenirNext-UltraLight.woff") format("woff"), url("fonts/AvenirNext-UltraLight.ttf") format("truetype"); font-weight: normal; font-style: normal; }
+
+@font-face { font-family: abold; src: url("fonts/AvenirNext-Bold.eot"); src: url("fonts/AvenirNext-Bold.eot?#iefix") format("embedded-opentype"), url("fonts/AvenirNext-Bold.woff") format("woff"), url("fonts/AvenirNext-Bold.ttf") format("truetype"); font-weight: normal; font-style: normal; }
+
+@font-face { font-family: asemi; src: url("fonts/AvenirNext-DemiBold.eot"); src: url("fonts/AvenirNext-DemiBold.eot?#iefix") format("embedded-opentype"), url("fonts/AvenirNext-DemiBold.woff") format("woff"), url("fonts/AvenirNext-DemiBold.ttf") format("truetype"); font-weight: normal; font-style: normal; }
+
+@font-face { font-family: aital; src: url("fonts/AvenirNext-Italic.eot"); src: url("fonts/AvenirNext-Italic.eot?#iefix") format("embedded-opentype"), url("fonts/AvenirNext-Italic.woff") format("woff"), url("fonts/AvenirNext-Italic.ttf") format("truetype"); font-weight: normal; font-style: normal; }
+
+@font-face { font-family: amed; src: url("fonts/AvenirNext-Medium.eot"); src: url("fonts/AvenirNext-Medium.eot?#iefix") format("embedded-opentype"), url("fonts/AvenirNext-Medium.woff") format("woff"), url("fonts/AvenirNext-Medium.ttf") format("truetype"); font-weight: normal; font-style: normal; }
+
+body { font-family: areg, sans-serif; font-weight: normal; font-size: 12px; line-height: 1.4; }
+
+.in { width: 1180px; margin: 0 auto; }
+
+.in { position: relative; }
+
+.start { height: 100vh; min-height: 760px; background: url(../img/start.jpg) no-repeat 50% 50%; -webkit-background-size: cover; -o-background-size: cover; background-size: cover; position: relative; }
+.start .start__links { position: absolute; right: 0; top: 10px; text-align: right; }
+.start .start__links a { font-size: 15px; text-transform: uppercase; text-decoration: none; letter-spacing: 2px; display: inline-block; color: white; padding: 15px 18px; vertical-align: middle; }
+.start .start__links .start__signup { border: 2px solid #1db6b3; border-radius: 2px; margin-left: 14px; font-family: asemi, sans-serif; font-weight: normal; background-image: -webkit-gradient(linear, 0% 50%, 100% 50%, color-stop(0%, #1db6b3), color-stop(100%, #343959)); background-image: -webkit-linear-gradient(left, #1db6b3, #343959); background-image: -moz-linear-gradient(left, #1db6b3, #343959); background-image: -o-linear-gradient(left, #1db6b3, #343959); background-image: linear-gradient(left, #1db6b3, #343959); }
+.start .logo { position: absolute; left: 0; top: 17px; font-family: proxima, sans-serif; font-weight: normal; text-decoration: none; cursor: pointer; letter-spacing: 3px; font-size: 20px; text-transform: uppercase; color: white; }
+.start .logo i { display: inline-block; background: url("../img/svg/logo.svg") no-repeat 0 0; -moz-background-size: 45px 40px; -webkit-background-size: 45px 40px; background-size: 45px 40px; width: 45px; height: 40px; display: inline-block; vertical-align: middle; margin-right: 10px; }
+.start .logo strong { color: #f7ce67; font-weight: normal; font-family: bold, sans-serif; font-weight: normal; }
+.start .start__bottom { position: absolute; left: 0; bottom: 0; right: 0; background: #353556; height: 70px; }
+.start .start__bottomlinks { float: left; height: 70px; line-height: 70px; color: white; list-style: none; }
+.start .start__bottomlinks li { float: left; }
+.start .start__bottomlinks a { float: left; font-size: 15px; color: white; text-decoration: none; margin-right: 31px; }
+.start .start__bottomlinks.is-right { float: right; }
+.start .start__bottomlinks.is-right a { margin-right: 0; margin-left: 31px; }
+.start .start__gonext { position: absolute; left: 50%; top: 15px; margin-left: -20px; background: url("../img/svg/arrow.svg") no-repeat 0 0; -moz-background-size: 40px 40px; -webkit-background-size: 40px 40px; background-size: 40px 40px; width: 40px; height: 40px; display: inline-block; cursor: pointer; -webkit-background-size: contain; -o-background-size: contain; background-size: contain; -webkit-transition: all 0.2s ease-in; -moz-transition: all 0.2s ease-in; -o-transition: all 0.2s ease-in; transition: all 0.2s ease-in; }
+.start .start__gonext:hover { top: 19px; }
+
+.now { width: 720px; margin: 0 auto; padding-top: 200px; text-align: center; }
+.now h2 { font-weight: normal; font-family: bold, sans-serif; font-weight: normal; font-size: 46px; color: #2a2946; text-transform: uppercase; }
+.now p { font-family: amed, sans-serif; font-weight: normal; font-size: 22px; color: #353659; line-height: 1.5; margin-bottom: 18px; }
+.now .now__cube { background: url("../img/svg/cube.svg") no-repeat 0 0; -moz-background-size: 116px 100px; -webkit-background-size: 116px 100px; background-size: 116px 100px; width: 116px; height: 100px; display: inline-block; display: inline-block; -webkit-background-size: contain; -o-background-size: contain; background-size: contain; margin-bottom: 20px; }
+
+.form { font-size: 0; }
+.form .form__input { border: 2px solid #1db6b3; width: 346px; height: 64px; font-size: 16px; padding-top: 0px; line-height: normal; padding-left: 15px; padding-right: 15px; font-family: areg, sans-serif; font-weight: normal; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; margin-right: 10px; vertical-align: middle; background: rgba(255, 255, 255, 0.5); }
+.form .form__input:-ms-input-placeholder { font-size: 16px; color: #4d4d67; }
+.form .form__input:-moz-placeholder { font-size: 16px; color: #4d4d67; }
+.form .form__input::-moz-placeholder { font-size: 16px; color: #4d4d67; }
+.form .form__input::-webkit-input-placeholder { font-size: 16px; color: #4d4d67; }
+.form .form__input::placeholder { font-size: 16px; color: #4d4d67; }
+.form .form__submit { height: 60px; border: 2px solid #1db6b3; border-radius: 2px; width: 350px; text-align: center; background-image: -webkit-gradient(linear, 0% 50%, 100% 50%, color-stop(0%, #1db6b3), color-stop(100%, #343858)); background-image: -webkit-linear-gradient(left, #1db6b3, #343858); background-image: -moz-linear-gradient(left, #1db6b3, #343858); background-image: -o-linear-gradient(left, #1db6b3, #343858); background-image: linear-gradient(left, #1db6b3, #343858); letter-spacing: 3px; color: white; text-transform: uppercase; cursor: pointer; font-size: 17px; font-family: asemi, sans-serif; font-weight: normal; display: inline-block; line-height: 60px; vertical-align: middle; }
+
+.adv { background: #353556; height: 100vh; min-height: 760px; }
+.adv h2 { font-size: 42px; padding-top: 20px; font-weight: normal; font-family: asemi, sans-serif; font-weight: normal; color: white; text-align: center; margin-bottom: 57px; }
+.adv ul { list-style: none; }
+.adv ul li { display: inline-block; width: 40%; text-align: center; vertical-align: top; margin-bottom: 60px; }
+.adv ul li.spaceme { margin-right: 160px; }
+.adv ul h3 { font-weight: normal; color: white; font-family: asemi, sans-serif; font-weight: normal; font-size: 21px; margin-bottom: 18px; margin-top: 16px; }
+.adv ul p { font-size: 17px; font-family: areg, sans-serif; font-weight: normal; color: white; line-height: 1.3; max-width: 346px; margin: 0 auto; }
+.adv ul .adv__icon { -webkit-background-size: contain; -o-background-size: contain; background-size: contain; }
+
+.icon-tools { display: inline-block; background: url("../img/svg/a-tools.svg") no-repeat 0 0; -moz-background-size: 100px 100px; -webkit-background-size: 100px 100px; background-size: 100px 100px; width: 100px; height: 100px; display: inline-block; }
+
+.icon-globe { display: inline-block; background: url("../img/svg/a-globe.svg") no-repeat 0 0; -moz-background-size: 100px 100px; -webkit-background-size: 100px 100px; background-size: 100px 100px; width: 100px; height: 100px; display: inline-block; }
+
+.icon-volatility { display: inline-block; background: url("../img/svg/a-volatility.svg") no-repeat 0 0; -moz-background-size: 100px 100px; -webkit-background-size: 100px 100px; background-size: 100px 100px; width: 100px; height: 100px; display: inline-block; }
+
+.icon-zero { display: inline-block; background: url("../img/svg/a-zero.svg") no-repeat 0 0; -moz-background-size: 100px 100px; -webkit-background-size: 100px 100px; background-size: 100px 100px; width: 100px; height: 100px; display: inline-block; }
+
+.scr { height: 100vh; min-height: 720px; background: #f8f8f8; }
+.scr .in { *zoom: 1; padding-top: 85px; }
+.scr .in:after { content: " "; display: table; clear: both; }
+.scr .scr__pic { float: left; }
+.scr .scr__text { float: right; width: 514px; padding-top: 200px; font-size: 22px; font-family: areg, sans-serif; font-weight: normal; line-height: 1.3; }
+.scr .scr__text h2 { font-weight: normal; font-size: 42px; font-family: asemi, sans-serif; font-weight: normal; color: #353458; line-height: 1.3; margin-bottom: 38px; }
+
+.icon-api { display: inline-block; background: url("../img/svg/s-api.svg") no-repeat 0 0; -moz-background-size: 130px 130px; -webkit-background-size: 130px 130px; background-size: 130px 130px; width: 130px; height: 130px; display: inline-block; }
+
+.icon-cart { display: inline-block; background: url("../img/svg/s-cart.svg") no-repeat 0 0; -moz-background-size: 130px 130px; -webkit-background-size: 130px 130px; background-size: 130px 130px; width: 130px; height: 130px; display: inline-block; }
+
+.icon-button { display: inline-block; background: url("../img/svg/s-button.svg") no-repeat 0 0; -moz-background-size: 130px 130px; -webkit-background-size: 130px 130px; background-size: 130px 130px; width: 130px; height: 130px; display: inline-block; }
+
+.solutions { background: white; }
+.solutions .in { padding: 61px 0 85px; *zoom: 1; }
+.solutions .in:after { content: " "; display: table; clear: both; }
+.solutions h2 { font-weight: normal; font-family: asemi, sans-serif; font-weight: normal; font-size: 42px; color: #353458; text-align: center; margin-bottom: 68px; }
+.solutions .solutions__item { float: left; text-align: center; width: 27%; padding: 0 3%; font-size: 17px; color: #353458; line-height: 1.3; }
+.solutions .solutions__item h3 { font-size: 21px; font-weight: normal; font-family: asemi, sans-serif; font-weight: normal; margin: 20px 0; color: #353458; }
+
+.bottom { background: url(../img/bottom.jpg) no-repeat 50% 50%; -webkit-background-size: cover; -o-background-size: cover; background-size: cover; height: 100vh; min-height: 700px; }
+.bottom .in { height: 100vh; min-height: 700px; }
+.bottom .getstarted { background: rgba(249, 252, 253, 0.8); width: 954px; position: absolute; left: 50%; top: 50%; margin-left: -500px; margin-top: -120px; text-align: center; padding: 13px 0 23px 0; }
+.bottom .getstarted h3 { font-size: 36px; color: #353558; font-weight: normal; margin-bottom: 29px; font-family: amed, sans-serif; font-weight: normal; }
+
+footer { background: #f9fcfd; font-size: 21px; color: #455473; padding: 75px 0; text-align: center; }
