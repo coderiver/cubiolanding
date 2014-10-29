@@ -12,7 +12,7 @@
 	<script src="js/common.js"></script>
 </head>
 <body class="b-client">
-<div class="cube"></div>
+
 <section class="section start">
 	<div class="in">
 		<div class="logo"><i></i><strong>Cubits</strong></div>
@@ -20,7 +20,7 @@
 		<div class="start__links">
 			<a href="#">Merchants</a>
 			<a href="#">login</a>
-			<a href="#" class="start__signup">Sign up</a>
+			<a href="#" class="start__signup js-popup" data-popup="popup-signup">Sign up</a>
 		</div>
 		<div class="now">
 			<h2>FUTURIZE YOUR MONEY</h2>
@@ -113,5 +113,56 @@
 <footer>
 	<p>© 2014 DOOGA Ltd.</p>
 </footer>
+<div class="cube"></div>
+<div class="overlay"></div>
+
+<!-- begin popup popup_narrow  -->
+<div class="popup " id="popup-signup">
+	<div class="popup__close">X</div>
+	<div class="popup__content">
+		<div class="popup__title">Sign up</div>
+		<div class="popup__inside">
+
+			<div class="signup">
+				<div class="signup__text">
+					Futurize your money with Cubits.
+				</div>
+				<div class="input input_icon ">
+					<input type="text" name="" placeholder="ex. Max Power" id="">
+					<i class="input__icon icon-mail"></i>
+				</div>
+			</div>
+
+
+
+			<div class="popup__bottom">
+				Already have an account? <a href="#">Login</a>
+			</div>
+		</div>
+		<div class="submit js-popup" data-popup="popup-success">Create cubits wallet</div>
+	</div>
+</div>
+<!-- end popup  -->
+
+<!-- begin popup   -->
+<div class="popup " id="popup-success">
+	<div class="popup__close">X</div>
+	<div class="popup__content">
+		<div class="popup__title">Thank you</div>
+		<div class="popup__inside">
+
+			<div class="success">
+
+					We've sent an email to <strong>sean.j.yao@gmail.com</strong><br>
+					Click the link in the email to begin!
+
+
+			</div>
+
+		</div>
+		<div class="resend">Resend email</div>
+	</div>
+</div>
+<!-- end popup  -->
 </body>
 </html>

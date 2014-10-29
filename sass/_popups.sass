@@ -1,0 +1,276 @@
+.overlay
+	position: absolute
+	top: 0px 
+	background: #768395
+	opacity: .9  
+	bottom: 0
+	right: 0
+	left: 0 
+	z-index: 1000   
+	display: none
+	position: fixed
+.has-popup
+	overflow: hidden
+=transform($val)
+	-moz-transform: $val
+	-ms-transform: $val
+	-webkit-transform: $val
+	transform: $val
+.popup
+	left: 50%
+	z-index: 1001 
+	position: absolute
+	background: #fff 
+	+transition(all 200ms ceaser($easeInOutQuad))
+	+transition(all 500ms ceaser($easeInOutBack) 200ms)
+	// +translate(0,-1000px)
+	+transform(scale(.02))
+	width: 640px 
+	margin-left: -(640px/2)
+	top: 50%
+	margin-top: -200px 
+	z-index: -1
+	opacity: 0  
+	background: #F9FCFD 
+			
+	&.is-shown
+		// +translate(0,0)
+		+transform(scale(1))
+		display: block
+		z-index: 10000
+		opacity: 1 
+.popup__content
+	padding-top: 20px 
+	+areg
+	font-size: 14px 
+	color: #353458 
+.fancybox-wrap,.popup
+	h3
+		letter-spacing: 3px 
+		font-weight: normal
+		text-transform: uppercase
+		text-align: center
+		font-size: 15px 
+		+preg
+		margin-bottom: 27px 
+	.popup__title
+		+preg
+		font-size: 18px 
+		color: #353458
+		text-align: center
+		text-transform: uppercase
+		font-weight: normal
+		margin-bottom: 20px 
+		letter-spacing: 3px 
+		span
+			display: block
+			font-size: 13px 
+			text-align: center
+			+areg
+			color: #A1A2AF 
+			text-transform: none
+			letter-spacing: 0 
+		i
+			vertical-align: middle
+			margin-right: 15px 
+			position: relative
+			top: -2px 
+	.popup__subtitle
+		text-align: center
+	.popup__close
+		position: absolute
+		right: 20px 
+		top: 20px 
+		font-size: 19px 
+		color: #93C4D2 
+		cursor: pointer
+		+amed
+
+
+%submit
+	background: #1EBEBB 
+	font-size: 20px 
+	letter-spacing: 3px
+	text-align: center
+	+amed
+	color: #fff
+	text-transform: uppercase
+	text-decoration: none
+	cursor: pointer
+	box-shadow: inset 0 0 0 3px #27E5E1  
+	+transition(all .1s ease)
+	height: 66px
+	line-height: 66px 
+	&:hover
+		background: darken(#1EBEBB,10% )
+	i
+		color: #F8D37B 
+		margin-right: 5px 
+		font-size: 24px 
+		position: relative
+		top: 2px 
+		vertical-align: middle
+	&:active
+		// position: relative
+		// top: 2px 
+		.fancybox-wrap &
+			top: 0 
+	&.submit_subtle
+		background: #95C4D1 
+		box-shadow: inset 0 0 0 3px #A2D6E4  
+	&.submit_small
+		font-size: 16px 
+		height: 50px 
+		line-height: 50px 
+	&.submit_pay
+		letter-spacing: 0
+		+asemi
+		strong
+			+amed
+.submit
+	@extend %submit
+.input
+	display: block
+	position: relative
+	input
+		display: block
+		padding: 0 54px 0 23px
+		// padding-left: 60px 
+		border: 2px solid #95C4D1 
+		border-radius: 2px
+		box-shadow: inset 3px 3px 0 #EAEAEA
+		background: #fff
+		+box
+		height: 66px  
+		line-height: 66px 
+		line-height: normal 
+		width: 100% 
+		+amed
+		font-size: 17px 
+		color: #CBCBCB 
+		color: #353556 
+		&:focus
+			border-color: #1EBEBB 
+			color: #353556 
+		&:focus + .input__currency
+			background-color: #1EBEBB 
+			color: #fff 
+	input[disabled]
+		color: #CBCBCB  !important
+	&.input_icon
+		input
+			padding-right: 70px 
+	.input__icon
+		position: absolute
+		right: 29px 
+		top: 20px 
+		font-size: 20px 
+		color: #93C4D2
+		font-size: 25px 
+		&.icon-qr
+			border: 2px solid #93C4D2
+			line-height: 1 
+			height: 40px 
+			line-height: 50px 
+			display: inline-block
+			width: 60px 
+			text-align: center
+			top: 11px 
+			right: 10px 
+	input:focus + .input__icon
+		color: #179290 
+	.error
+		position: absolute
+		padding: 14px 
+		background: #F6E0E6 
+		+amed
+		font-size: 13px 
+		color: #ED1847 
+		border-radius: 3px
+		top: 70px
+		left: 0
+		z-index: 200   
+		width: 100% 
+		+box
+		&:before
+			width: 20px 
+			height: 20px 
+			background: #F6E0E6
+			// background: green 
+			content: ' '
+			+rotate(45)
+			left: 60px 
+			top: -9px 
+			position: absolute
+	&.input_important
+		input
+			border-color: #1EBEBB 
+			color: #1EBEBB 
+.errorstatus
+	position: absolute
+	right: -245px 
+	width: 230px 
+	bottom: 10px 
+	font-size: 15px 
+	+amed
+	color: #ED1847 
+	padding: 0
+	line-height: 1  
+	i
+		font-size: 25px 
+		margin-right: 15px 
+		vertical-align: middle
+		position: relative
+		top: 2px 
+	&.is-ok
+		color: #23C7C4 
+.popup__bottom
+	background: #fff 
+	border-top: 1px solid #E6EDF2 
+	padding: 15px 20px 
+	+areg
+	font-size: 13px 
+	text-align: center
+	a
+		color: #1EBEBB
+		text-decoration: none
+		+asemi 
+	span
+		display: block
+		font-size: 15px 
+		margin-bottom: 5px 
+		strong
+			font-weight: normal
+			+asemi
+			color: #00BFBC 
+.signup
+	margin: 0 auto
+	width: 410px  
+	padding: 50px 0
+	text-align: center
+	.signup__text
+		font-size: 21px 
+		margin-bottom: 30px 
+		+areg
+		color: #00BFBC 
+.success
+	font-size: 19px 
+	color: #00BFBC
+	text-align: center
+	padding: 110px 0
+	line-height: 1.8
+	strong
+		font-weight: normal
+		+asemi
+
+.resend
+	background: #fff 
+	border-top: 1px solid #EBEFF6 
+	height: 70px
+	line-height: 70px
+	font-size: 16px   
+	color: #00BFBC
+	text-decoration: none
+	cursor: pointer
+	text-align: center
+	+areg 
