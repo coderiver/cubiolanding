@@ -17,6 +17,7 @@ body
 	-o-background-size: cover 
 	background-size: cover  
 	position: relative
+	z-index: 400 
 	.b-client &
 		background: #F8FCFD url(../img/bank.jpg) no-repeat 50% 100%
 	.start__links
@@ -126,6 +127,7 @@ body
 	margin: 0 auto 
 	padding-top: 200px 
 	text-align: center
+	
 	.b-client &
 		.form
 			margin-top: 75px 
@@ -245,6 +247,8 @@ body
 .your
 	background: #353556 
 	text-align: center
+	z-index: 400 
+	position: relative
 	.in
 		height: 100vh 
 		position: relative
@@ -268,7 +272,8 @@ body
 		position: absolute
 		left: 50%
 		bottom: 0
-		margin-left: -510px   
+		margin-left: -510px  
+		width: 1020px  
 		img
 			display: block
 			width: 100% 
@@ -367,7 +372,7 @@ body
 	background-size: cover 
 	height: 100vh
 	min-height: 700px
-	z-index: 100 
+	z-index: 400 
 	position: relative
 	.in
 		height: 100vh
@@ -389,7 +394,38 @@ body
 			margin-bottom: 29px 
 			+amed
 
-		  
+
+$width:  120px
+.cube
+	+svg(cube, $width, 200px)
+	position: fixed
+	top: 50%
+	left: 50%
+	z-index: 300
+	width: $width   
+	height: 200px 
+	margin-top: -90px 
+	margin-left: -($width/2)
+	background-position:  50% 50%
+	
+	-webkit-background-size: contain 
+	-o-background-size: contain 
+	background-size: contain 
+%animated
+	height: 100vh
+	min-height: 650px  
+	p
+		+areg
+		font-size: 25px 
+		color: #353458 
+		text-align: center
+		margin: 0 auto 
+.plane
+	@extend %animated
+.hexa
+	@extend %animated
+.hand
+	@extend %animated
 
 footer
 	background: #F9FCFD 
