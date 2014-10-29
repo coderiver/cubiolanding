@@ -316,7 +316,7 @@ footer { background: #f9fcfd; font-size: 21px; color: #455473; padding: 75px 0; 
 .plane .plane__icon { position: absolute; width: 400px; margin-left: -177px; left: 50%; top: 100px; background: url("../img/svg/plane.svg") no-repeat 0 0; -moz-background-size: 370px 400px; -webkit-background-size: 370px 400px; background-size: 370px 400px; width: 370px; height: 400px; display: inline-block; -webkit-background-size: contain; -o-background-size: contain; background-size: contain; }
 .plane .plane__text { position: absolute; width: 100%; top: 370px; left: 0; }
 
-.hexa .hexa__icon { position: absolute; width: 400px; margin-left: -105px; left: 50%; bottom: 440px; background: url("../img/svg/hexa.svg") no-repeat 0 0; -moz-background-size: 210px 400px; -webkit-background-size: 210px 400px; background-size: 210px 400px; width: 210px; height: 400px; display: inline-block; -webkit-background-size: contain; -o-background-size: contain; background-size: contain; }
+.hexa .hexa__icon { position: absolute; width: 400px; margin-left: -105px; left: 50%; bottom: 440px; background: url("../img/svg/hexa.svg") no-repeat 0 0; -moz-background-size: 210px 250px; -webkit-background-size: 210px 250px; background-size: 210px 250px; width: 210px; height: 250px; display: inline-block; -webkit-background-size: contain; -o-background-size: contain; background-size: contain; }
 .hexa .hexa__text { position: absolute; width: 100%; bottom: 240px; left: 0; }
 
 .hand { background: #353656; }
