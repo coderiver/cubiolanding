@@ -310,3 +310,17 @@ footer { background: #f9fcfd; font-size: 21px; color: #455473; padding: 75px 0; 
 
 .plane, .hexa, .hand { height: 100vh; min-height: 650px; }
 .plane p, .hexa p, .hand p { font-family: areg, sans-serif; font-weight: normal; font-size: 25px; color: #353458; text-align: center; margin: 0 auto; position: relative; z-index: 700; }
+.plane h2, .hexa h2, .hand h2 { color: #ed1847; font-size: 42px; font-weight: normal; font-family: asemi, sans-serif; font-weight: normal; text-align: center; margin-bottom: 30px; position: relative; z-index: 700; }
+.plane .in, .hexa .in, .hand .in { position: relative; height: 100vh; min-height: 750px; }
+
+.plane .plane__icon { position: absolute; width: 400px; margin-left: -177px; left: 50%; top: 100px; background: url("../img/svg/plane.svg") no-repeat 0 0; -moz-background-size: 370px 400px; -webkit-background-size: 370px 400px; background-size: 370px 400px; width: 370px; height: 400px; display: inline-block; -webkit-background-size: contain; -o-background-size: contain; background-size: contain; }
+.plane .plane__text { position: absolute; width: 100%; top: 370px; left: 0; }
+
+.hexa .hexa__icon { position: absolute; width: 400px; margin-left: -105px; left: 50%; bottom: 440px; background: url("../img/svg/hexa.svg") no-repeat 0 0; -moz-background-size: 210px 400px; -webkit-background-size: 210px 400px; background-size: 210px 400px; width: 210px; height: 400px; display: inline-block; -webkit-background-size: contain; -o-background-size: contain; background-size: contain; }
+.hexa .hexa__text { position: absolute; width: 100%; bottom: 240px; left: 0; }
+
+.hand { background: #353656; }
+.hand .hand__icon { position: absolute; width: 400px; margin-left: -177px; left: 50%; bottom: 300px; background: url("../img/svg/hand.svg") no-repeat 0 0; -moz-background-size: 370px 400px; -webkit-background-size: 370px 400px; background-size: 370px 400px; width: 370px; height: 400px; display: inline-block; -webkit-background-size: contain; -o-background-size: contain; background-size: contain; }
+.hand .hand__text { position: absolute; width: 100%; bottom: 83px; left: 0; }
+.hand h2 { color: #f7ce67; }
+.hand p { color: white; }

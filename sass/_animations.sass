@@ -25,9 +25,74 @@ $width:  120px
 		margin: 0 auto 
 		position: relative
 		z-index: 700 
+	h2
+		color: #ED1847
+		font-size: 42px  
+		font-weight: normal
+		+asemi
+		text-align: center
+		margin-bottom: 30px 
+		position: relative
+		z-index: 700 
+	.in
+		position: relative
+		height: 100vh
+		min-height: 750px  
 .plane
 	@extend %animated
+	.plane__icon
+		position: absolute
+		width: 400px 
+		margin-left: -177px 
+		left: 50%
+		top: 100px
+		+svg(plane,370,400)
+		-webkit-background-size: contain 
+		-o-background-size: contain
+		background-size: contain 
+	.plane__text
+		position: absolute
+		width: 100%
+		top: 370px  
+		left: 0 
 .hexa
 	@extend %animated
+	.hexa__icon
+		position: absolute
+		width: 400px 
+		margin-left: -105px 
+		left: 50%
+		bottom: 440px 
+		+svg(hexa,210,400)
+		-webkit-background-size: contain
+		-o-background-size: contain
+		background-size: contain
+	.hexa__text
+		position: absolute
+		width: 100%
+		bottom: 240px  
+		left: 0 
+
 .hand
 	@extend %animated
+	background: #353656 
+	.hand__icon
+		position: absolute
+		width: 400px 
+		margin-left: -177px 
+		left: 50%
+		bottom: 300px
+		+svg(hand,370,400)
+		-webkit-background-size: contain
+		-o-background-size: contain
+		background-size: contain
+	
+	.hand__text
+		position: absolute
+		width: 100%
+		bottom: 83px  
+		left: 0 
+	h2
+		color: #F7CE67 
+	p
+		color: #FFFFFF 
