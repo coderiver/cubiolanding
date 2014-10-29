@@ -7,7 +7,8 @@
 	@extend %in
 	position: relative
 
-
+body
+	background: #F8F8F8 
 .start
 	height: 100vh
 	min-height: 760px 
@@ -264,6 +265,32 @@
 	height: 100vh
 	min-height: 720px 
 	background: #F8F8F8 
+	position: relative
+	&.scr1
+		z-index: 50
+	&.scr2
+		z-index: 100 
+		background: transparent 
+	.in__content
+		position: absolute
+		width: 1180px 
+	.scr__wrappics
+		position: relative
+		img
+			position: absolute
+			left: 0
+			top: 0
+		.pic2
+			opacity: 0
+			top: 30px   
+			+transition(all .5s ease-in-out)
+			z-index: 20 
+		&.is-showed2
+			.pic2
+				top: 0
+				opacity: 1  
+				+transition(all .5s ease-in-out)
+
 	.in
 		+clr
 		padding-top: 85px 
@@ -290,6 +317,8 @@
 		+svg(s-#{$s}, 130, 130)
 .solutions
 	background: #fff 
+	z-index: 100
+	position: relative 
 	.in
 		padding: 61px 0 85px
 		+clr
@@ -321,6 +350,8 @@
 	background-size: cover 
 	height: 100vh
 	min-height: 700px
+	z-index: 100 
+	position: relative
 	.in
 		height: 100vh
 		min-height: 700px
@@ -349,7 +380,8 @@ footer
 	color: #455473 
 	padding: 75px 0
 	text-align: center 
-	
+	z-index: 100 
+	position: relative
 
 
 
