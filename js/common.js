@@ -1,8 +1,10 @@
 head.ready(function() {
 
-	// $(document).on("click", function(){
-	// 	$(".js-popup").hide();
-	// });
+	$(".start__gonext").click(function() {
+	    $('html, body').animate({
+	        scrollTop: $("section:nth-child(2)").offset().top
+	    }, 800);
+	    return false
+	});
 
-	console.log($('body').html());
 });
