@@ -99,11 +99,14 @@ body { background: #f8f8f8; }
 
 .your { background: #353556; text-align: center; }
 .your .in { height: 100vh; position: relative; }
-.your .in .your__text { position: absolute; bottom: 430px; left: 50%; width: 1000px; margin-left: -500px; }
+.your .in .your__text { position: absolute; bottom: 450px; left: 50%; width: 1000px; margin-left: -500px; }
 .your .in h2 { color: #f8cf5e; font-size: 45px; font-weight: normal; font-family: asemi, sans-serif; font-weight: normal; text-align: center; }
 .your .in p { font-size: 25px; line-height: 1.5; color: white; }
 .your .your__pic { position: absolute; left: 50%; bottom: 0; margin-left: -510px; }
-.your .your__pic img { display: block; }
+.your .your__pic img { display: block; width: 100%; }
+@media only screen and (-webkit-min-device-pixel-ratio: 1.3), only screen and (min--moz-device-pixel-ratio: 1.3), only screen and (-o-min-device-pixel-ratio: 1.3 / 1), only screen and (min-resolution: 125dpi), only screen and (min-resolution: 1.3dppx) { .your .your__pic img { display: none; } }
+.your .your__pic .retina { display: none; }
+@media only screen and (-webkit-min-device-pixel-ratio: 1.3), only screen and (min--moz-device-pixel-ratio: 1.3), only screen and (-o-min-device-pixel-ratio: 1.3 / 1), only screen and (min-resolution: 125dpi), only screen and (min-resolution: 1.3dppx) { .your .your__pic .retina { display: block; } }
 
 .scr { height: 100vh; min-height: 720px; background: #f8f8f8; position: relative; }
 .scr.scr1 { z-index: 50; }

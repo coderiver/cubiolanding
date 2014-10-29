@@ -1,4 +1,5 @@
-head.ready(function() {
+$(document).ready(function() {
+	
 
 	$(".start__gonext").click(function() {
 	    $('html, body').animate({

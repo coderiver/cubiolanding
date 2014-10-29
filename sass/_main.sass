@@ -239,11 +239,10 @@ body
 		position: relative
 		.your__text
 			position: absolute
-			bottom: 430px 
+			bottom: 450px 
 			left: 50%
 			width: 1000px 
 			margin-left: -500px  
-			
 		h2
 			color: #F8CF5E
 			font-size: 45px  
@@ -261,6 +260,13 @@ body
 		margin-left: -510px   
 		img
 			display: block
+			width: 100% 
+			+hdpi
+				display: none
+		.retina
+			display: none 
+			+hdpi
+				display: block
 .scr
 	height: 100vh
 	min-height: 720px 
