@@ -52,6 +52,7 @@ body { background: #f8f8f8; }
 .start .start__exchange { position: absolute; top: 30px; left: 190px; font-family: areg, sans-serif; font-weight: normal; font-size: 13px; line-height: 1; }
 .start .start__exchange span { color: #b4c1e5; margin: 0 5px; font-size: 10px; }
 .start .logo { position: absolute; left: 0; top: 17px; font-family: proxima, sans-serif; font-weight: normal; text-decoration: none; cursor: pointer; letter-spacing: 3px; font-size: 20px; text-transform: uppercase; color: white; }
+.start .logo em { letter-spacing: 0; text-transform: none; font-style: normal; font-family: amed, sans-serif; font-weight: normal; font-size: 11px; color: #353458; position: relative; top: -6px; }
 .start .logo i { display: inline-block; background: url("../img/svg/logo.svg") no-repeat 0 0; -moz-background-size: 45px 40px; -webkit-background-size: 45px 40px; background-size: 45px 40px; width: 45px; height: 40px; display: inline-block; vertical-align: middle; margin-right: 10px; }
 .b-client .start .logo i { background: url("../img/svg/logodark.svg") no-repeat 0 0; -moz-background-size: 45px 40px; -webkit-background-size: 45px 40px; background-size: 45px 40px; width: 45px; height: 40px; display: inline-block; }
 .start .logo strong { color: #f7ce67; font-weight: normal; font-family: bold, sans-serif; font-weight: normal; }
@@ -145,7 +146,7 @@ body { background: #f8f8f8; }
 .bottom .getstarted h3 { font-size: 36px; color: #353558; font-weight: normal; margin-bottom: 29px; font-family: amed, sans-serif; font-weight: normal; }
 .b-client .bottom .getstarted h3 { color: white; text-shadow: 1px 1px 1px #7a849f; }
 
-footer { background: #f9fcfd; font-size: 21px; color: #455473; padding: 75px 0; text-align: center; z-index: 100; position: relative; }
+footer { background: #f9fcfd; font-size: 21px; color: #455473; padding: 75px 0 20px; text-align: center; z-index: 100; position: relative; }
 
 .overlay { position: absolute; top: 0px; background: #768395; opacity: 0.9; bottom: 0; right: 0; left: 0; z-index: 1000; display: none; position: fixed; }
 
