@@ -27,11 +27,17 @@ $(document).ready(function() {
 	if($('.hand').length>0){
 		toggler1 =  $(".plane__icon").offset().top - $(window).height()/2 + 100;
 		toggler2 =  $(".hexa").offset().top - $(window).height()/2 + 190;
-		toggler3 =  $(".hand").offset().top;
+		toggler3 =  $(".hand").offset().top - $(window).height()/2 + 191;
 		$(window).scroll(function(event) {
 			if($(window).scrollTop()>toggler1){$('.plane').addClass('is-active');}
 			if($(window).scrollTop()>toggler2){$('.hexa').addClass('is-active');}
-			if($(window).scrollTop()>toggler3){$('.hand').addClass('is-active');}
+			if($(window).scrollTop()>toggler3){
+				$('.hand').addClass('is-active');
+				$('body').addClass('is-cubefinal');
+			}
+			else{
+				$('body').removeClass('is-cubefinal')
+			}
 		});
 	}
 
