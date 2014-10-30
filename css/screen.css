@@ -313,14 +313,27 @@ footer { background: #f9fcfd; font-size: 21px; color: #455473; padding: 75px 0; 
 .plane h2, .hexa h2, .hand h2 { color: #ed1847; font-size: 42px; font-weight: normal; font-family: asemi, sans-serif; font-weight: normal; text-align: center; margin-bottom: 30px; position: relative; z-index: 700; }
 .plane .in, .hexa .in, .hand .in { position: relative; height: 100vh; min-height: 750px; }
 
-.plane .plane__icon { position: absolute; width: 400px; margin-left: -177px; left: 50%; top: 100px; background: url("../img/svg/plane.svg") no-repeat 0 0; -moz-background-size: 370px 400px; -webkit-background-size: 370px 400px; background-size: 370px 400px; width: 370px; height: 400px; display: inline-block; -webkit-background-size: contain; -o-background-size: contain; background-size: contain; }
+.plane .plane__icon { position: absolute; width: 400px; margin-left: -177px; left: 50%; top: 100px; -webkit-background-size: contain; -o-background-size: contain; background-size: contain; width: 370px; height: 400px; }
+.plane .plane__icon svg { width: 370px; position: absolute; top: 0; left: 0; opacity: 0; transition: all 1s linear; }
+.plane .plane__icon svg path { stroke-dasharray: 1200; stroke-dashoffset: 1200; transition: all 0.7s linear; }
+.plane .plane__icon .plane__iconforw { z-index: 800; }
+.plane .plane__icon .plane__iconforw #plane_behind, .plane .plane__icon .plane__iconforw #cube1 { display: none; }
 .plane .plane__text { position: absolute; width: 100%; top: 370px; left: 0; }
+.plane.is-active .plane__icon svg { opacity: 1; }
+.plane.is-active .plane__icon svg path { stroke-dashoffset: 0; }
 
-.hexa .hexa__icon { position: absolute; width: 400px; margin-left: -105px; left: 50%; bottom: 440px; background: url("../img/svg/hexa.svg") no-repeat 0 0; -moz-background-size: 210px 250px; -webkit-background-size: 210px 250px; background-size: 210px 250px; width: 210px; height: 250px; display: inline-block; -webkit-background-size: contain; -o-background-size: contain; background-size: contain; }
+.hexa .hexa__icon { position: absolute; width: 400px; margin-left: -105px; left: 50%; bottom: 440px; width: 210px; height: 250px; -webkit-background-size: contain; -o-background-size: contain; background-size: contain; }
+.hexa .hexa__icon svg { width: 210px; height: 250px; position: absolute; top: 0; left: 0; }
+.hexa .hexa__icon .hexa__back #lasers, .hexa .hexa__icon .hexa__back #vault_Dial, .hexa .hexa__icon .hexa__back #vault_outer { display: none; }
+.hexa .hexa__icon .hexa__forw { z-index: 800; }
+.hexa .hexa__icon .hexa__forw #cube, .hexa .hexa__icon .hexa__forw #lasers, .hexa .hexa__icon .hexa__forw #vault_Dial, .hexa .hexa__icon .hexa__forw #vault_outer, .hexa .hexa__icon .hexa__forw #inner_vault_fill { opacity: 0; -webkit-transition: all 0.2s linear; -moz-transition: all 0.2s linear; -o-transition: all 0.2s linear; transition: all 0.2s linear; }
 .hexa .hexa__text { position: absolute; width: 100%; bottom: 240px; left: 0; }
+.hexa.is-active .hexa__icon svg.hexa__forw #cube, .hexa.is-active .hexa__icon svg.hexa__forw #lasers, .hexa.is-active .hexa__icon svg.hexa__forw #vault_Dial, .hexa.is-active .hexa__icon svg.hexa__forw #vault_outer { opacity: 1; }
 
 .hand { background: #353656; }
-.hand .hand__icon { position: absolute; width: 400px; margin-left: -177px; left: 50%; bottom: 300px; background: url("../img/svg/hand.svg") no-repeat 0 0; -moz-background-size: 370px 400px; -webkit-background-size: 370px 400px; background-size: 370px 400px; width: 370px; height: 400px; display: inline-block; -webkit-background-size: contain; -o-background-size: contain; background-size: contain; }
+.hand .hand__icon { position: absolute; width: 400px; margin-left: -185px; left: 50%; bottom: 300px; width: 370px; height: 400px; -webkit-background-size: contain; -o-background-size: contain; background-size: contain; }
+.hand .hand__icon svg { width: 370px; height: 400px; position: absolute; top: 0; left: 0; }
+.hand .hand__icon .hand__forw { z-index: 800; }
 .hand .hand__text { position: absolute; width: 100%; bottom: 83px; left: 0; }
 .hand h2 { color: #f7ce67; }
 .hand p { color: white; }

@@ -46,15 +46,40 @@ $width:  120px
 		margin-left: -177px 
 		left: 50%
 		top: 100px
-		+svg(plane,370,400)
+		// +svg(plane,370,400)
 		-webkit-background-size: contain 
 		-o-background-size: contain
 		background-size: contain 
+		width: 370px 
+		height: 400px 
+		svg
+			width: 370px 
+			position: absolute
+			top: 0
+			left: 0  
+			opacity: 0 
+			transition: all 1s linear
+			path
+				stroke-dasharray: 1200
+				stroke-dashoffset: 1200
+				transition: all .7s linear
+		.plane__iconback
+			// z-index: 1 
+		.plane__iconforw
+			z-index: 800 
+			#plane_behind,#cube1
+				display: none
 	.plane__text
 		position: absolute
 		width: 100%
 		top: 370px  
 		left: 0 
+	&.is-active
+		.plane__icon
+			svg
+				opacity: 1 
+				path
+					stroke-dashoffset: 0
 .hexa
 	@extend %animated
 	.hexa__icon
@@ -63,15 +88,42 @@ $width:  120px
 		margin-left: -105px 
 		left: 50%
 		bottom: 440px 
-		+svg(hexa,210,250)
+		// +svg(hexa,210,250)
+		width: 210px 
+		height: 250px 
 		-webkit-background-size: contain
 		-o-background-size: contain
 		background-size: contain
+		svg
+			width: 210px 
+			height: 250px 
+			position: absolute
+			top: 0
+			left: 0 
+		.hexa__back
+			// display: none
+			#lasers,#vault_Dial,#vault_outer
+				display: none 
+		.hexa__forw
+			z-index: 800 
+			// display: none
+			#cube,#lasers,#vault_Dial,#vault_outer,#inner_vault_fill
+				// fill: none
+				opacity: 0 
+				// display: none
+				+transition(all .2s linear)
 	.hexa__text
 		position: absolute
 		width: 100%
 		bottom: 240px  
 		left: 0 
+	&.is-active
+		.hexa__icon
+			svg
+				&.hexa__forw
+					#cube,#lasers,#vault_Dial,#vault_outer
+						opacity: 1 
+
 
 .hand
 	@extend %animated
@@ -79,14 +131,24 @@ $width:  120px
 	.hand__icon
 		position: absolute
 		width: 400px 
-		margin-left: -177px 
+		margin-left: -185px 
 		left: 50%
 		bottom: 300px
-		+svg(hand,370,400)
+		// +svg(hand,370,400)
+		width: 370px 
+		height: 400px 
 		-webkit-background-size: contain
 		-o-background-size: contain
 		background-size: contain
-	
+		svg
+			width: 370px 
+			height: 400px  
+			position: absolute
+			top: 0
+			left: 0 
+		.hand__back
+		.hand__forw
+			z-index: 800
 	.hand__text
 		position: absolute
 		width: 100%
