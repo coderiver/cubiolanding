@@ -96,7 +96,9 @@ body.b-clien { background: #f8f8f8; }
 .form .form__input::-webkit-input-placeholder { font-size: 16px; color: #4d4d67; }
 .form .form__input::placeholder { font-size: 16px; color: #4d4d67; }
 .form .form__submit { height: 60px; border: 2px solid #1db6b3; border-radius: 2px; width: 350px; text-align: center; background-image: -webkit-gradient(linear, 0% 50%, 100% 50%, color-stop(0%, #1db6b3), color-stop(100%, #343858)); background-image: -webkit-linear-gradient(left, #1db6b3, #343858); background-image: -moz-linear-gradient(left, #1db6b3, #343858); background-image: -o-linear-gradient(left, #1db6b3, #343858); background-image: linear-gradient(left, #1db6b3, #343858); letter-spacing: 3px; color: white; text-transform: uppercase; cursor: pointer; font-size: 17px; font-family: asemi, sans-serif; font-weight: normal; display: inline-block; line-height: 60px; vertical-align: middle; }
+.form .form__submit:hover { background: #1db6b3; }
 .b-client .form .form__submit { border-color: #ea284c; background-image: -webkit-gradient(linear, 0% 50%, 100% 50%, color-stop(0%, #ea284c), color-stop(100%, #363657)); background-image: -webkit-linear-gradient(left, #ea284c, #363657); background-image: -moz-linear-gradient(left, #ea284c, #363657); background-image: -o-linear-gradient(left, #ea284c, #363657); background-image: linear-gradient(left, #ea284c, #363657); }
+.b-client .form .form__submit:hover { background: #ea284c; }
 
 .adv { background: #353556; height: 100vh; min-height: 760px; }
 .adv h2, .adv h1 { font-size: 42px; padding-top: 20px; font-weight: normal; font-family: asemi, sans-serif; font-weight: normal; color: white; text-align: center; margin-bottom: 57px; }
