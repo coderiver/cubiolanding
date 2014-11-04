@@ -51,6 +51,8 @@ $width:  120px
 		margin-left: -177px 
 		left: 50%
 		top: 100px
+		top: 50%
+		margin-top: -100px  
 		// +svg(plane,370,400)
 		-webkit-background-size: contain 
 		-o-background-size: contain
@@ -67,7 +69,7 @@ $width:  120px
 			path
 				stroke-dasharray: 1200
 				stroke-dashoffset: 1200
-				transition: all .7s linear
+				transition: all .5s linear
 		.plane__iconback
 			// z-index: 1 
 		.plane__iconforw
@@ -77,9 +79,10 @@ $width:  120px
 	.plane__text
 		position: absolute
 		width: 100%
-		top: 370px  
+		top: 50%
+		margin-top: 120px   
 		left: 0 
-	&.is-active
+	&.is-active, .scroll-pos-fixing &
 		.plane__icon
 			svg
 				opacity: 1 
@@ -93,6 +96,9 @@ $width:  120px
 		margin-left: -105px 
 		left: 50%
 		bottom: 440px 
+		top: 50%
+		bottom: auto  
+		margin-top: -158px 
 		// +svg(hexa,210,250)
 		width: 210px 
 		height: 250px 
@@ -122,8 +128,10 @@ $width:  120px
 	.hexa__text
 		position: absolute
 		width: 100%
-		bottom: 240px  
+		// bottom: 240px  
 		left: 0 
+		top: 50%
+		margin-top: 100px  
 	&.is-active
 		.hexa__icon
 			svg
@@ -185,3 +193,15 @@ $width:  120px
 				+transition(all .1s linear)
 				path
 					stroke-dashoffset: 0
+.staging
+	height: 3000px 
+	width: 100% 
+	position: relative
+.first
+	height: 300px
+	width: 100%
+	// z-index: 10000
+	bottom: 0
+	position: absolute
+.second
+	@extend .first

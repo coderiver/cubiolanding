@@ -101,7 +101,7 @@ body { background: #f8f8f8; }
 .icon-zero { display: inline-block; background: url("../img/svg/a-zero.svg") no-repeat 0 0; -moz-background-size: 100px 100px; -webkit-background-size: 100px 100px; background-size: 100px 100px; width: 100px; height: 100px; display: inline-block; }
 
 .your { background: #353556; text-align: center; z-index: 400; position: relative; }
-.your .in { height: 100vh; position: relative; }
+.your .in { height: 100vh; position: relative; max-height: 760px; }
 .your .in .your__text { position: absolute; bottom: 450px; left: 50%; width: 1000px; margin-left: -500px; }
 .your .in h2 { color: #f8cf5e; font-size: 45px; font-weight: normal; font-family: asemi, sans-serif; font-weight: normal; text-align: center; }
 .your .in p { font-size: 25px; line-height: 1.5; color: white; }
@@ -315,16 +315,16 @@ footer { background: #f9fcfd; font-size: 21px; color: #455473; padding: 75px 0 2
 .plane h2, .hexa h2, .hand h2 { color: #ed1847; font-size: 42px; font-weight: normal; font-family: asemi, sans-serif; font-weight: normal; text-align: center; margin-bottom: 30px; position: relative; z-index: 700; }
 .plane .in, .hexa .in, .hand .in { position: relative; height: 100vh; min-height: 750px; }
 
-.plane .plane__icon { position: absolute; width: 400px; margin-left: -177px; left: 50%; top: 100px; -webkit-background-size: contain; -o-background-size: contain; background-size: contain; width: 370px; height: 400px; }
+.plane .plane__icon { position: absolute; width: 400px; margin-left: -177px; left: 50%; top: 100px; top: 50%; margin-top: -100px; -webkit-background-size: contain; -o-background-size: contain; background-size: contain; width: 370px; height: 400px; }
 .plane .plane__icon svg { width: 370px; position: absolute; top: 0; left: 0; opacity: 0; transition: all 1s linear; }
-.plane .plane__icon svg path { stroke-dasharray: 1200; stroke-dashoffset: 1200; transition: all 0.7s linear; }
+.plane .plane__icon svg path { stroke-dasharray: 1200; stroke-dashoffset: 1200; transition: all 0.5s linear; }
 .plane .plane__icon .plane__iconforw { z-index: 800; }
 .plane .plane__icon .plane__iconforw #plane_behind, .plane .plane__icon .plane__iconforw #cube1 { display: none; }
-.plane .plane__text { position: absolute; width: 100%; top: 370px; left: 0; }
-.plane.is-active .plane__icon svg { opacity: 1; }
-.plane.is-active .plane__icon svg path { stroke-dashoffset: 0; }
+.plane .plane__text { position: absolute; width: 100%; top: 50%; margin-top: 120px; left: 0; }
+.plane.is-active .plane__icon svg, .scroll-pos-fixing .plane .plane__icon svg { opacity: 1; }
+.plane.is-active .plane__icon svg path, .scroll-pos-fixing .plane .plane__icon svg path { stroke-dashoffset: 0; }
 
-.hexa .hexa__icon { position: absolute; width: 400px; margin-left: -105px; left: 50%; bottom: 440px; width: 210px; height: 250px; -webkit-background-size: contain; -o-background-size: contain; background-size: contain; }
+.hexa .hexa__icon { position: absolute; width: 400px; margin-left: -105px; left: 50%; bottom: 440px; top: 50%; bottom: auto; margin-top: -158px; width: 210px; height: 250px; -webkit-background-size: contain; -o-background-size: contain; background-size: contain; }
 .hexa .hexa__icon svg { width: 210px; height: 250px; position: absolute; top: 0; left: 0; }
 .hexa .hexa__icon .hexa__back #lasers, .hexa .hexa__icon .hexa__back #vault_Dial, .hexa .hexa__icon .hexa__back #vault_outer { display: none; }
 .hexa .hexa__icon .hexa__forw { z-index: 800; }
@@ -332,7 +332,7 @@ footer { background: #f9fcfd; font-size: 21px; color: #455473; padding: 75px 0 2
 .hexa .hexa__icon .hexa__forw #lasers { -webkit-transition-delay: 0.6s; -moz-transition-delay: 0.6s; -o-transition-delay: 0.6s; transition-delay: 0.6s; }
 .hexa .hexa__icon .hexa__forw #vault_Dial { -webkit-transition-delay: 0s; -moz-transition-delay: 0s; -o-transition-delay: 0s; transition-delay: 0s; }
 .hexa .hexa__icon .hexa__forw #vault_outer { -webkit-transition-delay: 0.3s; -moz-transition-delay: 0.3s; -o-transition-delay: 0.3s; transition-delay: 0.3s; }
-.hexa .hexa__text { position: absolute; width: 100%; bottom: 240px; left: 0; }
+.hexa .hexa__text { position: absolute; width: 100%; left: 0; top: 50%; margin-top: 100px; }
 .hexa.is-active .hexa__icon svg.hexa__forw #cube, .hexa.is-active .hexa__icon svg.hexa__forw #lasers, .hexa.is-active .hexa__icon svg.hexa__forw #vault_Dial, .hexa.is-active .hexa__icon svg.hexa__forw #vault_outer { opacity: 1; }
 
 .hand { background: #353656; }
@@ -347,3 +347,7 @@ footer { background: #f9fcfd; font-size: 21px; color: #455473; padding: 75px 0 2
 .hand p { color: white; }
 .hand.is-active .hand__icon svg { opacity: 1; -webkit-transition: all 0.1s linear; -moz-transition: all 0.1s linear; -o-transition: all 0.1s linear; transition: all 0.1s linear; }
 .hand.is-active .hand__icon svg path { stroke-dashoffset: 0; }
+
+.staging { height: 3000px; width: 100%; position: relative; }
+
+.first, .second { height: 300px; width: 100%; bottom: 0; position: absolute; }
