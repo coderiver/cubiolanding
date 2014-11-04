@@ -8,6 +8,20 @@ $(document).ready(function() {
 	    return false
 	});
 
+    //popups
+    $('.js-popup').click(function(event) {
+        $('.popup').removeClass('is-shown');
+        pop = $(this).data('popup');
+        $('#'+pop).addClass('is-shown')
+        $('.overlay').fadeIn();
+        return false;
+    });
+
+    $('.popup__close,.overlay').click(function(event) {
+        $('.popup').removeClass('is-shown')
+        $('.overlay').fadeOut();
+    });
+
 
 	if($('.scr1').length>0){
 		$('.scr1 .scr__wrappics').sticky({topSpacing:80});
@@ -24,6 +38,14 @@ $(document).ready(function() {
 		});
 	}
 
+    $(window).scroll(function(event) {
+        if($(window).scrollTop()>300){$('.header').addClass('is-active');}
+        else{$('.header').removeClass('is-active');}
+    });
+
+
+
+    // if client landing
 	if($('.hand').length>0){
 		toggler1 =  $(".plane__icon").offset().top - $(window).height()/2 + 100;
 		toggler2 =  $(".hexa").offset().top - $(window).height()/2 + 190;
@@ -40,25 +62,13 @@ $(document).ready(function() {
 				// $('body').removeClass('is-cubefinal')
 			}
 		});
-	}
-    $(window).scroll(function(event) {
-        if($(window).scrollTop()>300){$('.header').addClass('is-active');}
-        else{$('.header').removeClass('is-active');}
-    });
 
-	//popups
-	$('.js-popup').click(function(event) {
-		$('.popup').removeClass('is-shown');
-		pop = $(this).data('popup');
-		$('#'+pop).addClass('is-shown')
-		$('.overlay').fadeIn();
-		return false;
-	});
 
-	$('.popup__close,.overlay').click(function(event) {
-		$('.popup').removeClass('is-shown')
-		$('.overlay').fadeOut();
-	});
+
+	
+    
+
+	
 
 
 
@@ -95,98 +105,64 @@ $(document).ready(function() {
         }
     ], $('.staging'));
 
-    	$('.second').scroolly([
-            {
-                alias: 'before',
-                from: '',
-                to: 'con-top + 1400  = top',
-                css: {
-                    position: 'absolute',
-                    top: "1400px"
-                }
-            },
-            {
-                alias: 'fixing',
-                from: 'con-top + 1400 = top',
-                to: 'con-top +1900 = top',
-                css: {
-                    position: 'fixed',
-                    top: '0',
-                    bottom: ''
-                }
-    //                    onScroll: function($el, offset, length)
-            },
-            {
-                alias: 'unfixing',
-                from: 'con-top +1900 = top',
-                to: 'doc-bottom',
-                css: {
-                    position: 'absolute',
-                    top: '1900px',
-                    bottom: '0'
-                            
-                }
+	$('.second').scroolly([
+        {
+            alias: 'before',
+            from: '',
+            to: 'con-top + 1400  = top',
+            css: {
+                position: 'absolute',
+                top: "1400px"
             }
-        ], $('.staging'));
-
-    	$('.cube').scroolly([
-            {
-                alias: 'before',
-                from: '',
-                to: 'con-top + 3000  = top',
-                css: {
-                    position: 'fixed',
-                    top: "50%"
-                }
-            },
-            {
-                alias: 'fixing',
-                from: 'con-top + 3000 = top',
-                to: 'con-top +1900 = top',
-                css: {
-                    position: 'absolute',
-                    top: '5000px',
-                    bottom: ''
-                },
-                       onScroll: function($el, offset, length){
-                        console.log(offset);
-                       }
+        },
+        {
+            alias: 'fixing',
+            from: 'con-top + 1400 = top',
+            to: 'con-top +1900 = top',
+            css: {
+                position: 'fixed',
+                top: '0',
+                bottom: ''
             }
-        ], $('.staging'));
+//                    onScroll: function($el, offset, length)
+        },
+        {
+            alias: 'unfixing',
+            from: 'con-top +1900 = top',
+            to: 'doc-bottom',
+            css: {
+                position: 'absolute',
+                top: '1900px',
+                bottom: '0'
+                        
+            }
+        }
+    ], $('.staging'));
 
-    // 	$('.third').scroolly([
-    //         {
-    //             alias: 'before',
-    //             from: '',
-    //             to: 'con-top + 2000  = top',
-    //             css: {
-    //                 position: 'absolute',
-    //                 top: "2000px"
-    //             }
-    //         },
-    //         {
-    //             alias: 'fixing',
-    //             from: 'con-top + 2000 = top',
-    //             to: 'con-top +2500 = top',
-    //             css: {
-    //                 position: 'fixed',
-    //                 top: '0',
-    //                 bottom: ''
-    //             }
-    // //                    onScroll: function($el, offset, length)
-    //         },
-    //         {
-    //             alias: 'unfixing',
-    //             from: 'con-top +2500 = top',
-    //             to: 'doc-bottom',
-    //             css: {
-    //                 position: 'absolute',
-    //                 top: '2500px',
-    //                 bottom: '0'
-                            
-    //             }
-    //         }
-    //     ], $('.staging'));
+	$('.cube').scroolly([
+        {
+            alias: 'before',
+            from: '',
+            to: 'con-top + 3000  = top',
+            css: {
+                position: 'fixed',
+                top: "50%"
+            }
+        },
+        {
+            alias: 'fixing',
+            from: 'con-top + 3000 = top',
+            to: 'con-top +1900 = top',
+            css: {
+                position: 'absolute',
+                top: '5000px',
+                bottom: ''
+            },
+                   onScroll: function($el, offset, length){
+                    console.log(offset);
+                   }
+        }
+    ], $('.staging'));
 
-
+    }
 });
