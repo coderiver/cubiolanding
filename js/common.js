@@ -3,14 +3,14 @@ $(document).ready(function() {
 
 	$(".start__gonext").click(function() {
 	    $('html, body').animate({
-	        scrollTop: $("section:nth-child(2)").offset().top
+	        scrollTop: $("section:nth-of-type(2)").offset().top
 	    }, 800);
 	    return false
 	});
 
 
 	if($('.scr1').length>0){
-		$('.scr1 .scr__wrappics').sticky({topSpacing:50});
+		$('.scr1 .scr__wrappics').sticky({topSpacing:80});
 
 		toggler =  $(".scr2").offset().top;
 
@@ -29,6 +29,7 @@ $(document).ready(function() {
 		toggler2 =  $(".hexa").offset().top - $(window).height()/2 + 190;
 		toggler3 =  $(".hand").offset().top - $(window).height()/2 + 191;
 		$(window).scroll(function(event) {
+            
 			if($(window).scrollTop()>toggler1){$('.plane').addClass('is-active');}
 			if($(window).scrollTop()>toggler2){$('.hexa').addClass('is-active');}
 			if($(window).scrollTop()>toggler3){
@@ -40,8 +41,10 @@ $(document).ready(function() {
 			}
 		});
 	}
-
-
+    $(window).scroll(function(event) {
+        if($(window).scrollTop()>300){$('.header').addClass('is-active');}
+        else{$('.header').removeClass('is-active');}
+    });
 
 	//popups
 	$('.js-popup').click(function(event) {
@@ -144,8 +147,10 @@ $(document).ready(function() {
                     position: 'absolute',
                     top: '5000px',
                     bottom: ''
-                }
-    //                    onScroll: function($el, offset, length)
+                },
+                       onScroll: function($el, offset, length){
+                        console.log(offset);
+                       }
             }
         ], $('.staging'));
 
