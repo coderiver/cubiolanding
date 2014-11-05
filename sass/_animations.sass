@@ -1,4 +1,6 @@
 $width:  120px
+body
+	min-width: 1180px 
 .cube
 	+svg(cube, $width, 200px)
 	position: fixed
@@ -21,7 +23,7 @@ $width:  120px
 		 
 %animated
 	height: 100vh
-	min-height: 650px  
+	// min-height: 650px  
 	p
 		+areg
 		font-size: 25px 
@@ -42,9 +44,20 @@ $width:  120px
 	.in
 		position: relative
 		height: 100vh
-		min-height: 750px  
+		// min-height: 750px  
+.is-forw
+	z-index: 1000 
+	section
+		z-index: 1000 
 .plane
 	@extend %animated
+	position: absolute
+	top: 0
+	width: 100%
+	left: 0   
+	z-index: 10
+	&.plane_forw
+		z-index: 1000 
 	.plane__icon
 		position: absolute
 		width: 400px 
@@ -52,7 +65,7 @@ $width:  120px
 		left: 50%
 		top: 100px
 		top: 50%
-		margin-top: -100px  
+		margin-top: -98px  
 		// +svg(plane,370,400)
 		-webkit-background-size: contain 
 		-o-background-size: contain
@@ -65,7 +78,7 @@ $width:  120px
 			top: 0
 			left: 0  
 			opacity: 0 
-			transition: all 1s linear
+			transition: all .7s linear
 			path
 				stroke-dasharray: 1200
 				stroke-dashoffset: 1200
@@ -90,6 +103,21 @@ $width:  120px
 					stroke-dashoffset: 0
 .hexa
 	@extend %animated
+	.hexa__bg
+		position: absolute
+		top: 0
+		bottom: 0
+		left: 0
+		right: 0
+		width: 100%
+		height: 100vh 
+		background: url(#{$assetPath}locks_2x.jpg) no-repeat 50% 50%
+		-webkit-background-size: cover 
+		-o-background-size: cover 
+		background-size: cover  
+		opacity: .15 
+		.is-forw &
+			display: none
 	.hexa__icon
 		position: absolute
 		width: 400px 
@@ -98,7 +126,7 @@ $width:  120px
 		bottom: 440px 
 		top: 50%
 		bottom: auto  
-		margin-top: -158px 
+		margin-top: -158px + 38px
 		// +svg(hexa,210,250)
 		width: 210px 
 		height: 250px 
@@ -111,30 +139,38 @@ $width:  120px
 			position: absolute
 			top: 0
 			left: 0 
+			// opacity: 0 
+			+transition(all .1s linear)
+			.is-forw &
+				display: block
 		.hexa__back
 			#lasers,#vault_Dial,#vault_outer
 				display: none 
 		.hexa__forw
 			z-index: 800 
+			#dotted_lines,#hexagon,#cube
+				display: none
 			#cube,#lasers,#vault_Dial,#vault_outer,#inner_vault_fill
 				opacity: 0 
-				+transition(all .2s linear)
+				+transition(all .1s linear)
 			#lasers
-				+transition-delay(.6s)
+				+transition-delay(.4s)
 			#vault_Dial
 				+transition-delay(0s)
 			#vault_outer
-				+transition-delay(.3s)
+				+transition-delay(.2s)
 	.hexa__text
 		position: absolute
 		width: 100%
 		// bottom: 240px  
 		left: 0 
 		top: 50%
-		margin-top: 100px  
+		margin-top: 130px  
 	&.is-active
 		.hexa__icon
 			svg
+				opacity: 1
+				 
 				&.hexa__forw
 					#cube,#lasers,#vault_Dial,#vault_outer
 						opacity: 1 
@@ -142,6 +178,8 @@ $width:  120px
 .hand
 	@extend %animated
 	background: #353656 
+	.is-forw &
+		background: transparent 
 	.hand__icon
 		position: absolute
 		width: 400px 
@@ -149,6 +187,8 @@ $width:  120px
 		left: 50%
 		// bottom: 300px
 		top: 50px 
+		top: 50%
+		margin-top: -128px  
 		// +svg(hand,370,400)
 		width: 370px 
 		height: 400px 
@@ -161,11 +201,17 @@ $width:  120px
 			position: absolute
 			top: 0
 			left: 0 
-			opacity: 0 
+			opacity: 1
+			#lines_front,#dots_front,#lines_back,#dots_back
+				opacity: 0
+				+transition 
+				transition: all .4s linear
 			path
 				stroke-dasharray: 1200
 				stroke-dashoffset: 1200
 				transition: all .7s linear
+			#hand path
+				stroke-dashoffset: 0
 		.hand__back	
 			// display: none
 			#lines_front,#dots_front
@@ -180,8 +226,9 @@ $width:  120px
 		position: absolute
 		width: 100%
 		// bottom: 83px  
-		top: 476px 
-		left: 0 
+		top: 50% 
+		left: 0
+		margin-top: 300px 
 	h2
 		color: #F7CE67 
 	p
@@ -193,15 +240,37 @@ $width:  120px
 				+transition(all .1s linear)
 				path
 					stroke-dashoffset: 0
+			#lines_front
+				opacity: 0.6
+			#dots_front
+				opacity: 1.0
+			#lines_back
+				opacity: 0.25
+			#dots_back
+				opacity: 0.3
+	#lines_front
+		opacity: 0.6
+	#dots_front
+		opacity: 1.0
+	#lines_back
+		opacity: 0.25
+	#dots_back
+		opacity: 0.3
+
 .staging
-	height: 3000px 
+	height: 4600px 
 	width: 100% 
 	position: relative
 .first
-	height: 300px
+	// height: 300px
 	width: 100%
 	// z-index: 10000
 	bottom: 0
 	position: absolute
 .second
 	@extend .first
+.third
+	@extend .first
+	overflow: hidden
+	.hand
+		// height: 1200px 

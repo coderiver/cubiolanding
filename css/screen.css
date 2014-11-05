@@ -100,7 +100,7 @@ body.b-clien { background: #f8f8f8; }
 .b-client .form .form__submit { border-color: #ea284c; background-image: -webkit-gradient(linear, 0% 50%, 100% 50%, color-stop(0%, #ea284c), color-stop(100%, #363657)); background-image: -webkit-linear-gradient(left, #ea284c, #363657); background-image: -moz-linear-gradient(left, #ea284c, #363657); background-image: -o-linear-gradient(left, #ea284c, #363657); background-image: linear-gradient(left, #ea284c, #363657); }
 .b-client .form .form__submit:hover { background: #ea284c; }
 
-.adv { background: #353556; height: 100vh; min-height: 760px; }
+.adv { background: #353556; height: 800px; }
 .adv h2, .adv h1 { font-size: 42px; padding-top: 20px; font-weight: normal; font-family: asemi, sans-serif; font-weight: normal; color: white; text-align: center; margin-bottom: 57px; }
 .adv ul { list-style: none; }
 .adv ul li { display: inline-block; width: 40%; text-align: center; vertical-align: top; margin-bottom: 60px; }
@@ -318,16 +318,23 @@ footer { background: #f9fcfd; font-size: 21px; color: #455473; padding: 75px 0 2
 
 .icon-obt-logo-dark:before { content: "t"; }
 
+body { min-width: 1180px; }
+
 .cube { background: url("../img/svg/cube.svg") no-repeat 0 0; -moz-background-size: 120pxpx 200pxpx; -webkit-background-size: 120pxpx 200pxpx; background-size: 120pxpx 200pxpx; width: 120pxpx; height: 200pxpx; display: inline-block; position: fixed; top: 50%; left: 50%; z-index: 300; width: 120px; height: 200px; margin-top: -90px; margin-left: -60px; background-position: 50% 50%; -webkit-background-size: contain; -o-background-size: contain; background-size: contain; -webkit-transition: opacity 0.2s linear; -moz-transition: opacity 0.2s linear; -o-transition: opacity 0.2s linear; transition: opacity 0.2s linear; opacity: 1; }
 .is-cubefinal .cube { opacity: 0; }
 
-.plane, .hexa, .hand { height: 100vh; min-height: 650px; }
+.plane, .hexa, .hand { height: 100vh; }
 .plane p, .hexa p, .hand p { font-family: areg, sans-serif; font-weight: normal; font-size: 25px; color: #353458; text-align: center; margin: 0 auto; position: relative; z-index: 700; }
 .plane h2, .hexa h2, .hand h2, .plane h1, .hexa h1, .hand h1 { color: #ed1847; font-size: 42px; font-weight: normal; font-family: asemi, sans-serif; font-weight: normal; text-align: center; margin-bottom: 30px; position: relative; z-index: 700; }
-.plane .in, .hexa .in, .hand .in { position: relative; height: 100vh; min-height: 750px; }
+.plane .in, .hexa .in, .hand .in { position: relative; height: 100vh; }
 
-.plane .plane__icon { position: absolute; width: 400px; margin-left: -177px; left: 50%; top: 100px; top: 50%; margin-top: -100px; -webkit-background-size: contain; -o-background-size: contain; background-size: contain; width: 370px; height: 400px; }
-.plane .plane__icon svg { width: 370px; position: absolute; top: 0; left: 0; opacity: 0; transition: all 1s linear; }
+.is-forw { z-index: 1000; }
+.is-forw section { z-index: 1000; }
+
+.plane { position: absolute; top: 0; width: 100%; left: 0; z-index: 10; }
+.plane.plane_forw { z-index: 1000; }
+.plane .plane__icon { position: absolute; width: 400px; margin-left: -177px; left: 50%; top: 100px; top: 50%; margin-top: -98px; -webkit-background-size: contain; -o-background-size: contain; background-size: contain; width: 370px; height: 400px; }
+.plane .plane__icon svg { width: 370px; position: absolute; top: 0; left: 0; opacity: 0; transition: all 0.7s linear; }
 .plane .plane__icon svg path { stroke-dasharray: 1200; stroke-dashoffset: 1200; transition: all 0.5s linear; }
 .plane .plane__icon .plane__iconforw { z-index: 800; }
 .plane .plane__icon .plane__iconforw #plane_behind, .plane .plane__icon .plane__iconforw #cube1 { display: none; }
@@ -335,30 +342,48 @@ footer { background: #f9fcfd; font-size: 21px; color: #455473; padding: 75px 0 2
 .plane.is-active .plane__icon svg, .scroll-pos-fixing .plane .plane__icon svg { opacity: 1; }
 .plane.is-active .plane__icon svg path, .scroll-pos-fixing .plane .plane__icon svg path { stroke-dashoffset: 0; }
 
-.hexa .hexa__icon { position: absolute; width: 400px; margin-left: -105px; left: 50%; bottom: 440px; top: 50%; bottom: auto; margin-top: -158px; width: 210px; height: 250px; -webkit-background-size: contain; -o-background-size: contain; background-size: contain; }
-.hexa .hexa__icon svg { width: 210px; height: 250px; position: absolute; top: 0; left: 0; }
+.hexa .hexa__bg { position: absolute; top: 0; bottom: 0; left: 0; right: 0; width: 100%; height: 100vh; background: url(../img/locks_2x.jpg) no-repeat 50% 50%; -webkit-background-size: cover; -o-background-size: cover; background-size: cover; opacity: 0.15; }
+.is-forw .hexa .hexa__bg { display: none; }
+.hexa .hexa__icon { position: absolute; width: 400px; margin-left: -105px; left: 50%; bottom: 440px; top: 50%; bottom: auto; margin-top: -120px; width: 210px; height: 250px; -webkit-background-size: contain; -o-background-size: contain; background-size: contain; }
+.hexa .hexa__icon svg { width: 210px; height: 250px; position: absolute; top: 0; left: 0; -webkit-transition: all 0.1s linear; -moz-transition: all 0.1s linear; -o-transition: all 0.1s linear; transition: all 0.1s linear; }
+.is-forw .hexa .hexa__icon svg { display: block; }
 .hexa .hexa__icon .hexa__back #lasers, .hexa .hexa__icon .hexa__back #vault_Dial, .hexa .hexa__icon .hexa__back #vault_outer { display: none; }
 .hexa .hexa__icon .hexa__forw { z-index: 800; }
-.hexa .hexa__icon .hexa__forw #cube, .hexa .hexa__icon .hexa__forw #lasers, .hexa .hexa__icon .hexa__forw #vault_Dial, .hexa .hexa__icon .hexa__forw #vault_outer, .hexa .hexa__icon .hexa__forw #inner_vault_fill { opacity: 0; -webkit-transition: all 0.2s linear; -moz-transition: all 0.2s linear; -o-transition: all 0.2s linear; transition: all 0.2s linear; }
-.hexa .hexa__icon .hexa__forw #lasers { -webkit-transition-delay: 0.6s; -moz-transition-delay: 0.6s; -o-transition-delay: 0.6s; transition-delay: 0.6s; }
+.hexa .hexa__icon .hexa__forw #dotted_lines, .hexa .hexa__icon .hexa__forw #hexagon, .hexa .hexa__icon .hexa__forw #cube { display: none; }
+.hexa .hexa__icon .hexa__forw #cube, .hexa .hexa__icon .hexa__forw #lasers, .hexa .hexa__icon .hexa__forw #vault_Dial, .hexa .hexa__icon .hexa__forw #vault_outer, .hexa .hexa__icon .hexa__forw #inner_vault_fill { opacity: 0; -webkit-transition: all 0.1s linear; -moz-transition: all 0.1s linear; -o-transition: all 0.1s linear; transition: all 0.1s linear; }
+.hexa .hexa__icon .hexa__forw #lasers { -webkit-transition-delay: 0.4s; -moz-transition-delay: 0.4s; -o-transition-delay: 0.4s; transition-delay: 0.4s; }
 .hexa .hexa__icon .hexa__forw #vault_Dial { -webkit-transition-delay: 0s; -moz-transition-delay: 0s; -o-transition-delay: 0s; transition-delay: 0s; }
-.hexa .hexa__icon .hexa__forw #vault_outer { -webkit-transition-delay: 0.3s; -moz-transition-delay: 0.3s; -o-transition-delay: 0.3s; transition-delay: 0.3s; }
-.hexa .hexa__text { position: absolute; width: 100%; left: 0; top: 50%; margin-top: 100px; }
+.hexa .hexa__icon .hexa__forw #vault_outer { -webkit-transition-delay: 0.2s; -moz-transition-delay: 0.2s; -o-transition-delay: 0.2s; transition-delay: 0.2s; }
+.hexa .hexa__text { position: absolute; width: 100%; left: 0; top: 50%; margin-top: 130px; }
+.hexa.is-active .hexa__icon svg { opacity: 1; }
 .hexa.is-active .hexa__icon svg.hexa__forw #cube, .hexa.is-active .hexa__icon svg.hexa__forw #lasers, .hexa.is-active .hexa__icon svg.hexa__forw #vault_Dial, .hexa.is-active .hexa__icon svg.hexa__forw #vault_outer { opacity: 1; }
 
 .hand { background: #353656; }
-.hand .hand__icon { position: absolute; width: 400px; margin-left: -185px; left: 50%; top: 50px; width: 370px; height: 400px; -webkit-background-size: contain; -o-background-size: contain; background-size: contain; }
-.hand .hand__icon svg { width: 370px; height: 400px; position: absolute; top: 0; left: 0; opacity: 0; }
+.is-forw .hand { background: transparent; }
+.hand .hand__icon { position: absolute; width: 400px; margin-left: -185px; left: 50%; top: 50px; top: 50%; margin-top: -128px; width: 370px; height: 400px; -webkit-background-size: contain; -o-background-size: contain; background-size: contain; }
+.hand .hand__icon svg { width: 370px; height: 400px; position: absolute; top: 0; left: 0; opacity: 1; }
+.hand .hand__icon svg #lines_front, .hand .hand__icon svg #dots_front, .hand .hand__icon svg #lines_back, .hand .hand__icon svg #dots_back { opacity: 0; -webkit-transition: all 1s; -moz-transition: all 1s; -o-transition: all 1s; transition: all 1s; transition: all 0.4s linear; }
 .hand .hand__icon svg path { stroke-dasharray: 1200; stroke-dashoffset: 1200; transition: all 0.7s linear; }
+.hand .hand__icon svg #hand path { stroke-dashoffset: 0; }
 .hand .hand__icon .hand__back #lines_front, .hand .hand__icon .hand__back #dots_front { display: none; }
 .hand .hand__icon .hand__forw { z-index: 1800; }
 .hand .hand__icon .hand__forw #lines_back, .hand .hand__icon .hand__forw #dots_back { display: none; }
-.hand .hand__text { position: absolute; width: 100%; top: 476px; left: 0; }
+.hand .hand__text { position: absolute; width: 100%; top: 50%; left: 0; margin-top: 300px; }
 .hand h2 { color: #f7ce67; }
 .hand p { color: white; }
 .hand.is-active .hand__icon svg { opacity: 1; -webkit-transition: all 0.1s linear; -moz-transition: all 0.1s linear; -o-transition: all 0.1s linear; transition: all 0.1s linear; }
 .hand.is-active .hand__icon svg path { stroke-dashoffset: 0; }
+.hand.is-active .hand__icon #lines_front { opacity: 0.6; }
+.hand.is-active .hand__icon #dots_front { opacity: 1; }
+.hand.is-active .hand__icon #lines_back { opacity: 0.25; }
+.hand.is-active .hand__icon #dots_back { opacity: 0.3; }
+.hand #lines_front { opacity: 0.6; }
+.hand #dots_front { opacity: 1; }
+.hand #lines_back { opacity: 0.25; }
+.hand #dots_back { opacity: 0.3; }
 
-.staging { height: 3000px; width: 100%; position: relative; }
+.staging { height: 4600px; width: 100%; position: relative; }
 
-.first, .second { height: 300px; width: 100%; bottom: 0; position: absolute; }
+.first, .second, .third { width: 100%; bottom: 0; position: absolute; }
+
+.third { overflow: hidden; }

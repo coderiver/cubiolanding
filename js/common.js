@@ -47,11 +47,19 @@ $(document).ready(function() {
 
     // if client landing
 	if($('.hand').length>0){
-		toggler1 =  $(".plane__icon").offset().top - $(window).height()/2 + 100;
-		toggler2 =  $(".hexa").offset().top - $(window).height()/2 + 190;
-		toggler3 =  $(".hand").offset().top - $(window).height()/2 + 191;
+        // getting first
+        toggler1 = '10000';
+        toggler2 = '10000';
+        toggler3 = '10000';
+        setTimeout(function(){
+            toggler1 =  $(".first").offset().top;
+            toggler2 =  $(".second").offset().top;
+            toggler3 =  $(".third").offset().top;
+        }, 300);
+
+		// toggler2 =  $(".hexa").offset().top - $(window).height()/2 + 190;
+		// toggler3 =  $(".hand").offset().top - $(window).height()/2 + 191;
 		$(window).scroll(function(event) {
-            
 			if($(window).scrollTop()>toggler1){$('.plane').addClass('is-active');}
 			if($(window).scrollTop()>toggler2){$('.hexa').addClass('is-active');}
 			if($(window).scrollTop()>toggler3){
@@ -139,11 +147,45 @@ $(document).ready(function() {
         }
     ], $('.staging'));
 
+    $('.third').scroolly([
+        {
+            alias: 'before',
+            from: '',
+            to: 'con-top + 2900  = top',
+            css: {
+                position: 'absolute',
+                top: "2900px"
+            }
+        },
+        {
+            alias: 'fixing',
+            from: 'con-top + 2900 = top',
+            to: 'con-top +3400 = top',
+            css: {
+                position: 'fixed',
+                top: '0',
+                bottom: ''
+            }
+//                    onScroll: function($el, offset, length)
+        },
+        {
+            alias: 'unfixing',
+            from: 'con-top +3400 = top',
+            to: 'doc-bottom',
+            css: {
+                position: 'absolute',
+                top: '3400px',
+                bottom: '0'
+                        
+            }
+        }
+    ], $('.staging'));
+
 	$('.cube').scroolly([
         {
             alias: 'before',
             from: '',
-            to: 'con-top + 3000  = top',
+            to: 'con-top + 2900  = top',
             css: {
                 position: 'fixed',
                 top: "50%"
@@ -151,11 +193,11 @@ $(document).ready(function() {
         },
         {
             alias: 'fixing',
-            from: 'con-top + 3000 = top',
-            to: 'con-top +1900 = top',
+            from: 'con-top + 3400 = top',
+            to: 'con-top +6400 = top',
             css: {
                 position: 'absolute',
-                top: '5000px',
+                top: '3300px',
                 bottom: ''
             },
                    onScroll: function($el, offset, length){
