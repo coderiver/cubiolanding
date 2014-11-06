@@ -151,15 +151,15 @@ $(document).ready(function() {
         {
             alias: 'before',
             from: '',
-            to: 'con-top + 2900  = top',
+            to: 'con-top + 2700  = top',
             css: {
                 position: 'absolute',
-                top: "2900px"
+                top: "2700px"
             }
         },
         {
             alias: 'fixing',
-            from: 'con-top + 2900 = top',
+            from: 'con-top + 2700 = top',
             to: 'con-top +3400 = top',
             css: {
                 position: 'fixed',
@@ -181,15 +181,16 @@ $(document).ready(function() {
         }
     ], $('.staging'));
 
-	$('.cube').scroolly([
+	$('.cube_real').scroolly([
         {
             alias: 'before',
             from: '',
             to: 'con-top + 2900  = top',
             css: {
                 position: 'fixed',
-                top: "50%"
-            }
+                top: "150px"
+            },
+
         },
         {
             alias: 'fixing',
@@ -200,8 +201,9 @@ $(document).ready(function() {
                 top: '3300px',
                 bottom: ''
             },
-                   onScroll: function($el, offset, length){
-                    console.log(offset);
+                   onCheckIn: function($element, rule){
+                    $(".cube_fake").show();
+                    $(".cube_real").hide();
                    }
         }
     ], $('.staging'));

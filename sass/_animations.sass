@@ -4,12 +4,13 @@ body
 .cube
 	+svg(cube, $width, 200px)
 	position: fixed
-	top: 50%
+	// top: 50%
+	top: 150px 
 	left: 50%
 	z-index: 300
 	width: $width   
 	height: 200px 
-	margin-top: -90px 
+	// margin-top: -90px 
 	margin-left: -($width/2)
 	background-position:  50% 50%
 	
@@ -20,6 +21,11 @@ body
 	opacity: 1 
 	.is-cubefinal &
 		opacity: 0
+	&.cube_fake
+		display: none
+		position: absolute
+		left: 50%
+		top: 45px
 		 
 %animated
 	height: 100vh
@@ -64,8 +70,9 @@ body
 		margin-left: -177px 
 		left: 50%
 		top: 100px
-		top: 50%
-		margin-top: -98px  
+		// top: 50%
+		// margin-top: -98px  
+		top: 141px 
 		// +svg(plane,370,400)
 		-webkit-background-size: contain 
 		-o-background-size: contain
@@ -92,8 +99,9 @@ body
 	.plane__text
 		position: absolute
 		width: 100%
-		top: 50%
-		margin-top: 120px   
+		// top: 50%
+		// margin-top: 120px   
+		top: 440px 
 		left: 0 
 	&.is-active, .scroll-pos-fixing &
 		.plane__icon
@@ -124,9 +132,10 @@ body
 		margin-left: -105px 
 		left: 50%
 		bottom: 440px 
-		top: 50%
+		// top: 50%
+		top: 120px 
 		bottom: auto  
-		margin-top: -158px + 38px
+		// margin-top: -158px + 38px
 		// +svg(hexa,210,250)
 		width: 210px 
 		height: 250px 
@@ -164,8 +173,9 @@ body
 		width: 100%
 		// bottom: 240px  
 		left: 0 
-		top: 50%
-		margin-top: 130px  
+		// top: 50%
+		// margin-top: 130px  
+		top: 417px 
 	&.is-active
 		.hexa__icon
 			svg
@@ -186,10 +196,11 @@ body
 		margin-left: -185px 
 		left: 50%
 		// bottom: 300px
-		top: 50px 
-		top: 50%
-		margin-top: -128px  
+		// top: 50px 
+		// top: 50%
+		// margin-top: -128px  
 		// +svg(hand,370,400)
+		top: 105px 
 		width: 370px 
 		height: 400px 
 		-webkit-background-size: contain
@@ -226,9 +237,10 @@ body
 		position: absolute
 		width: 100%
 		// bottom: 83px  
-		top: 50% 
+		// top: 50% 
 		left: 0
-		margin-top: 300px 
+		// margin-top: 300px 
+		top: 546px 
 	h2
 		color: #F7CE67 
 	p
@@ -259,6 +271,8 @@ body
 
 .staging
 	height: 4600px 
+	height: 4132px 
+	height: 4150px 
 	width: 100% 
 	position: relative
 .first
@@ -267,6 +281,10 @@ body
 	// z-index: 10000
 	bottom: 0
 	position: absolute
+	section
+		height: 800px 
+	.in
+		height: 800px 
 .second
 	@extend .first
 .third
