@@ -9,21 +9,25 @@
 
 body
 	background: #fff 
-	&.b-clien 
+	&.b-client
 		background: #f8f8f8 
 .header
 	position: fixed
 	top: 0
 	left: 0
 	width: 100%
-	background: rgba(53, 53, 88, 0.8) 
+	// background: rgba(53, 53, 88, 0.8) 
+
 	z-index: 1200 
-	+transform(translate(0,-100px))
-	+transition(all .2s ease)
+	// +transform(translate(0,-100px))
+	+transition(all .4s ease)
 	&.is-active
-		+transform(translate(0,0))
+		// +transform(translate(0,0))
+		background: rgba(53, 53, 88, 0.8) 
 	.b-client &
-		background: rgba(249, 252, 253, 0.8) 
+		// background: rgba(249, 252, 253, 0.8) 
+		&.is-active
+			background: rgba(249, 252, 253, 0.8) 
 	.header__in
 		@extend %in 
 		position: relative
@@ -360,6 +364,9 @@ body
 				top: 0
 				opacity: 1  
 				+transition(all .5s ease-in-out)
+		&.notfixed
+			position: absolute !important
+			top: 880px !important
 
 	.in
 		+clr
