@@ -5,6 +5,13 @@ $(document).ready(function() {
         }, 2000);
     });
 
+    var ul = document.querySelector('.team ul');
+    if(ul){
+        for (var i = ul.children.length; i >= 0; i--) {
+            ul.appendChild(ul.children[Math.random() * i | 0]);
+        }
+    }
+
 	$(".start__gonext").click(function() {
 	    $('html, body').animate({
 	        scrollTop: $("section:nth-of-type(2)").offset().top
