@@ -40,10 +40,10 @@ body
 	position: relative
 	z-index: 400 
 	.b-client &
-		background: #F8FCFD url(#{$assetPath}Jar_2x.jpg) no-repeat 50% 100%
-		-webkit-background-size: 100% auto 
-		-o-background-size: 100% auto 
-		background-size: 100% auto 
+		background: #F8FCFD url(#{$assetPath}money03_1650.jpg) no-repeat 50% 50%
+		-webkit-background-size: cover 
+		-o-background-size: cover 
+		background-size: cover 
 	.video
 		position: absolute
 		top: 0
@@ -204,9 +204,16 @@ body
 	-o-background-size: contain 
 	background-size: contain 
 	+transition(all .2s ease-in)
+	.b-client &
+		+svg(arrow-dark,40,40)
+		-webkit-background-size: contain 
+		-o-background-size: contain 
+		background-size: contain 
 	&:hover
 		top: 15px + 4px 
 
+.start .in
+	height: 100vh 
 .now
 	width: 720px 
 	margin: 0 auto 
@@ -214,8 +221,18 @@ body
 	text-align: center
 	
 	.b-client &
+		background: rgba(250,250,250,0.65)
+		// padding: 10px 
+		top: 50%
+		padding: 10px 
+		margin-top: -130px  
+		position: absolute
+		width: 750px 
+		margin-left: -375px
+		left: 50% 
 		.form
-			margin-top: 75px 
+			// margin-top: 75px 
+			margin-top: 20px 
 	h2,h1
 		font-weight: normal
 		+pbold
@@ -223,6 +240,8 @@ body
 		color: #2A2946
 		color: #fff 
 		text-transform: uppercase
+		.b-client &
+			color: #353656 
 	p
 		+amed
 		font-size: 22px 
@@ -230,6 +249,8 @@ body
 		color: #fff 
 		line-height: 1.5  
 		margin-bottom: 18px 
+		.b-client &
+			color: #353656 
 	.now__cube
 		+svg(cube, 116,100)
 		display: inline-block
@@ -261,8 +282,8 @@ body
 			color: #4D4D67 
 	
 	.form__submit
-		height: 60px 
-		border: 2px solid #1DB6B3 
+		height: 60px + 4px
+		// border: 2px solid #1DB6B3 
 		border-radius: 2px
 		width: 350px 
 		text-align: center
@@ -274,15 +295,15 @@ body
 		font-size: 17px 
 		+asemi
 		display: inline-block
-		line-height: 60px 
+		line-height: 64px 
 		vertical-align: middle
 		&:hover
 			background: #1DB6B3 
 		.b-client &
 			border-color: #EA284C 
-			+gh(#EA284C, #363657)
+			+gh(rgba(237,24,71,0.85), #363657)
 			&:hover
-				background: #EA284C 
+				background: rgba(237,24,71,0.85) 
 
 
   
@@ -338,7 +359,8 @@ body
 		+svg(a-#{$s}, 100, 100)
 
 .your
-	background: #353556 
+	// background: #353556 
+	background: #FAFAFA 
 	text-align: center
 	z-index: 400 
 	position: relative
@@ -354,20 +376,28 @@ body
 			margin-left: -500px  
 		h2,h1
 			color: #F8CF5E
+			color: #353556 
 			font-size: 45px  
 			font-weight: normal
 			+asemi
 			text-align: center
+			text-transform: uppercase
 		p
 			font-size: 25px 
 			line-height: 1.5 
 			color: #fff 
+			color: #353556 
 	.your__pic
 		position: absolute
 		left: 50%
 		bottom: 0
 		margin-left: -510px  
 		width: 1020px  
+		+svg(cubits_ipad,1020,357)
+		height: 357px 
+		-webkit-background-size: cover 
+		-o-background-size: cover 
+		background-size: cover 
 		img
 			display: block
 			width: 100% 
@@ -444,6 +474,11 @@ body
 	.icon-#{$s}
 		display: inline-block
 		+svg(s-#{$s}, 130, 130)
+
+@each $s in Free,Instant,Safe
+	.icon-#{$s}
+		display: inline-block
+		+svg(#{$s}, 130, 130)
 .solutions
 	background: #fff 
 	z-index: 1000
@@ -452,6 +487,10 @@ body
 	.in
 		padding: 61px 0 85px
 		+clr
+		.b-client &
+			background: #FFFFFF
+			padding-top: 140px  
+			padding-bottom: 140px 
 	h2,h1
 		font-weight: normal
 		+asemi
@@ -467,6 +506,18 @@ body
 		font-size: 17px 
 		color: #353458
 		line-height: 1.3  
+		+transition(all .2s linear)
+		position: relative
+		top: -50px 
+		&+.solutions__item
+			+transition-delay(.5s)
+		&+.solutions__item+.solutions__item
+			+transition-delay(1s)
+		.b-client &
+			opacity: 0
+			&.is-active
+				opacity: 1 
+				top: 0 
 		h3
 			font-size: 21px 
 			font-weight: normal
@@ -483,8 +534,18 @@ body
 	z-index: 1000
 	position: relative
 	+gpu
+	.bottom__icon
+		+svg(Cubits_globe_stroke,300,300)
+		position: absolute
+		left: 50%
+		margin-left: -150px  
+		bottom: 350px 
 	.b-client &
-		background-image: url(#{$assetPath}path.jpg)
+		// background-image: url(#{$assetPath}path.jpg)
+		background: #FAFAFA url(#{$assetPath}Hand_solo_resize.jpg) no-repeat 50% 90%
+		-webkit-background-size: cover 
+		-o-background-size: cover 
+		background-size: cover 
 	.in
 		height: 100vh
 		min-height: 700px
@@ -501,6 +562,9 @@ body
 		.b-client &
 			margin-top: -300px 
 			background: transparent 
+			margin-top: 0
+			bottom: 0px   
+			top: auto
 		h3
 			font-size: 36px 
 			color: #353558
@@ -508,8 +572,9 @@ body
 			margin-bottom: 29px 
 			+amed
 			.b-client &
-				color: #fff
-				text-shadow: 1px 1px 1px #7A849F
+				font-size: 25px 
+				// color: #fff
+				// text-shadow: 1px 1px 1px #7A849F
 
 
 

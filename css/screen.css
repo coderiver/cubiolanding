@@ -49,7 +49,7 @@ body.b-client { background: #fafafa; }
 .header .header__in { position: relative; height: 77px; }
 
 .start { height: 100vh; position: relative; z-index: 400; }
-.b-client .start { background: #f8fcfd url(../img/Jar_2x.jpg) no-repeat 50% 100%; -webkit-background-size: 100% auto; -o-background-size: 100% auto; background-size: 100% auto; }
+.b-client .start { background: #f8fcfd url(../img/money03_1650.jpg) no-repeat 50% 50%; -webkit-background-size: cover; -o-background-size: cover; background-size: cover; }
 .start .video { position: absolute; top: 0; left: 0; right: 0; bottom: 0; z-index: 1; background: url(../img/westminster.jpg) no-repeat 50% 50%; -webkit-background-size: cover; -o-background-size: cover; background-size: cover; }
 .start .video video { position: absolute; right: 0; bottom: 0; min-width: 100%; min-height: 100%; width: auto; height: auto; }
 @media (max-width: 1000px) { .start .video video { display: none; } }
@@ -85,12 +85,18 @@ body.b-client { background: #fafafa; }
 .start__bottomlinks.is-right a { margin-right: 0; margin-left: 31px; }
 
 .start__gonext { position: absolute; left: 50%; top: 15px; margin-left: -20px; background: url("../img/svg/arrow.svg") no-repeat 0 0; -moz-background-size: 40px 40px; -webkit-background-size: 40px 40px; background-size: 40px 40px; width: 40px; height: 40px; display: inline-block; cursor: pointer; -webkit-background-size: contain; -o-background-size: contain; background-size: contain; -webkit-transition: all 0.2s ease-in; -moz-transition: all 0.2s ease-in; -o-transition: all 0.2s ease-in; transition: all 0.2s ease-in; }
+.b-client .start__gonext { background: url("../img/svg/arrow-dark.svg") no-repeat 0 0; -moz-background-size: 40px 40px; -webkit-background-size: 40px 40px; background-size: 40px 40px; width: 40px; height: 40px; display: inline-block; -webkit-background-size: contain; -o-background-size: contain; background-size: contain; }
 .start__gonext:hover { top: 19px; }
 
+.start .in { height: 100vh; }
+
 .now { width: 720px; margin: 0 auto; padding-top: 200px; text-align: center; }
-.b-client .now .form { margin-top: 75px; }
+.b-client .now { background: rgba(250, 250, 250, 0.65); top: 50%; padding: 10px; margin-top: -130px; position: absolute; width: 750px; margin-left: -375px; left: 50%; }
+.b-client .now .form { margin-top: 20px; }
 .now h2, .now h1 { font-weight: normal; font-family: bold, sans-serif; font-weight: normal; font-size: 46px; color: #2a2946; color: white; text-transform: uppercase; }
+.b-client .now h2, .b-client .now h1 { color: #353656; }
 .now p { font-family: amed, sans-serif; font-weight: normal; font-size: 22px; color: #353659; color: white; line-height: 1.5; margin-bottom: 18px; }
+.b-client .now p { color: #353656; }
 .now .now__cube { background: url("../img/svg/cube.svg") no-repeat 0 0; -moz-background-size: 116px 100px; -webkit-background-size: 116px 100px; background-size: 116px 100px; width: 116px; height: 100px; display: inline-block; display: inline-block; -webkit-background-size: contain; -o-background-size: contain; background-size: contain; margin-bottom: 20px; }
 
 .form { font-size: 0; }
@@ -101,10 +107,10 @@ body.b-client { background: #fafafa; }
 .form .form__input::-moz-placeholder { font-size: 16px; color: #4d4d67; }
 .form .form__input::-webkit-input-placeholder { font-size: 16px; color: #4d4d67; }
 .form .form__input::placeholder { font-size: 16px; color: #4d4d67; }
-.form .form__submit { height: 60px; border: 2px solid #1db6b3; border-radius: 2px; width: 350px; text-align: center; background-image: -webkit-gradient(linear, 0% 50%, 100% 50%, color-stop(0%, #1db6b3), color-stop(100%, #343858)); background-image: -webkit-linear-gradient(left, #1db6b3, #343858); background-image: -moz-linear-gradient(left, #1db6b3, #343858); background-image: -o-linear-gradient(left, #1db6b3, #343858); background-image: linear-gradient(left, #1db6b3, #343858); letter-spacing: 3px; color: white; text-transform: uppercase; cursor: pointer; font-size: 17px; font-family: asemi, sans-serif; font-weight: normal; display: inline-block; line-height: 60px; vertical-align: middle; }
+.form .form__submit { height: 64px; border-radius: 2px; width: 350px; text-align: center; background-image: -webkit-gradient(linear, 0% 50%, 100% 50%, color-stop(0%, #1db6b3), color-stop(100%, #343858)); background-image: -webkit-linear-gradient(left, #1db6b3, #343858); background-image: -moz-linear-gradient(left, #1db6b3, #343858); background-image: -o-linear-gradient(left, #1db6b3, #343858); background-image: linear-gradient(left, #1db6b3, #343858); letter-spacing: 3px; color: white; text-transform: uppercase; cursor: pointer; font-size: 17px; font-family: asemi, sans-serif; font-weight: normal; display: inline-block; line-height: 64px; vertical-align: middle; }
 .form .form__submit:hover { background: #1db6b3; }
-.b-client .form .form__submit { border-color: #ea284c; background-image: -webkit-gradient(linear, 0% 50%, 100% 50%, color-stop(0%, #ea284c), color-stop(100%, #363657)); background-image: -webkit-linear-gradient(left, #ea284c, #363657); background-image: -moz-linear-gradient(left, #ea284c, #363657); background-image: -o-linear-gradient(left, #ea284c, #363657); background-image: linear-gradient(left, #ea284c, #363657); }
-.b-client .form .form__submit:hover { background: #ea284c; }
+.b-client .form .form__submit { border-color: #ea284c; background-image: -webkit-gradient(linear, 0% 50%, 100% 50%, color-stop(0%, rgba(237, 24, 71, 0.85)), color-stop(100%, #363657)); background-image: -webkit-linear-gradient(left, rgba(237, 24, 71, 0.85), #363657); background-image: -moz-linear-gradient(left, rgba(237, 24, 71, 0.85), #363657); background-image: -o-linear-gradient(left, rgba(237, 24, 71, 0.85), #363657); background-image: linear-gradient(left, rgba(237, 24, 71, 0.85), #363657); }
+.b-client .form .form__submit:hover { background: rgba(237, 24, 71, 0.85); }
 
 .adv { background: #353556; height: 800px; }
 .adv h2, .adv h1 { font-size: 42px; padding-top: 20px; font-weight: normal; font-family: asemi, sans-serif; font-weight: normal; color: white; text-align: center; margin-bottom: 57px; }
@@ -123,12 +129,12 @@ body.b-client { background: #fafafa; }
 
 .icon-zero { display: inline-block; background: url("../img/svg/a-zero.svg") no-repeat 0 0; -moz-background-size: 100px 100px; -webkit-background-size: 100px 100px; background-size: 100px 100px; width: 100px; height: 100px; display: inline-block; }
 
-.your { background: #353556; text-align: center; z-index: 400; position: relative; }
+.your { background: #fafafa; text-align: center; z-index: 400; position: relative; }
 .your .in { height: 100vh; position: relative; max-height: 760px; }
 .your .in .your__text { position: absolute; bottom: 450px; left: 50%; width: 1000px; margin-left: -500px; }
-.your .in h2, .your .in h1 { color: #f8cf5e; font-size: 45px; font-weight: normal; font-family: asemi, sans-serif; font-weight: normal; text-align: center; }
-.your .in p { font-size: 25px; line-height: 1.5; color: white; }
-.your .your__pic { position: absolute; left: 50%; bottom: 0; margin-left: -510px; width: 1020px; }
+.your .in h2, .your .in h1 { color: #f8cf5e; color: #353556; font-size: 45px; font-weight: normal; font-family: asemi, sans-serif; font-weight: normal; text-align: center; text-transform: uppercase; }
+.your .in p { font-size: 25px; line-height: 1.5; color: white; color: #353556; }
+.your .your__pic { position: absolute; left: 50%; bottom: 0; margin-left: -510px; width: 1020px; background: url("../img/svg/cubits_ipad.svg") no-repeat 0 0; -moz-background-size: 1020px 357px; -webkit-background-size: 1020px 357px; background-size: 1020px 357px; width: 1020px; height: 357px; display: inline-block; height: 357px; -webkit-background-size: cover; -o-background-size: cover; background-size: cover; }
 .your .your__pic img { display: block; width: 100%; }
 @media only screen and (-webkit-min-device-pixel-ratio: 1.3), only screen and (min--moz-device-pixel-ratio: 1.3), only screen and (-o-min-device-pixel-ratio: 1.3 / 1), only screen and (min-resolution: 125dpi), only screen and (min-resolution: 1.3dppx) { .your .your__pic img { display: none; } }
 .your .your__pic .retina { display: none; }
@@ -156,20 +162,32 @@ body.b-client { background: #fafafa; }
 
 .icon-button { display: inline-block; background: url("../img/svg/s-button.svg") no-repeat 0 0; -moz-background-size: 130px 130px; -webkit-background-size: 130px 130px; background-size: 130px 130px; width: 130px; height: 130px; display: inline-block; }
 
+.icon-Free { display: inline-block; background: url("../img/svg/Free.svg") no-repeat 0 0; -moz-background-size: 130px 130px; -webkit-background-size: 130px 130px; background-size: 130px 130px; width: 130px; height: 130px; display: inline-block; }
+
+.icon-Instant { display: inline-block; background: url("../img/svg/Instant.svg") no-repeat 0 0; -moz-background-size: 130px 130px; -webkit-background-size: 130px 130px; background-size: 130px 130px; width: 130px; height: 130px; display: inline-block; }
+
+.icon-Safe { display: inline-block; background: url("../img/svg/Safe.svg") no-repeat 0 0; -moz-background-size: 130px 130px; -webkit-background-size: 130px 130px; background-size: 130px 130px; width: 130px; height: 130px; display: inline-block; }
+
 .solutions { background: white; z-index: 1000; position: relative; -webkit-transform: translate3d(0, 0, 0); -moz-transform: translate3d(0, 0, 0); -ms-transform: translate3d(0, 0, 0); -o-transform: translate3d(0, 0, 0); transform: translate3d(0, 0, 0); }
 .solutions .in { padding: 61px 0 85px; *zoom: 1; }
 .solutions .in:after { content: " "; display: table; clear: both; }
+.b-client .solutions .in { background: white; padding-top: 140px; padding-bottom: 140px; }
 .solutions h2, .solutions h1 { font-weight: normal; font-family: asemi, sans-serif; font-weight: normal; font-size: 42px; color: #353458; text-align: center; margin-bottom: 68px; }
-.solutions .solutions__item { float: left; text-align: center; width: 27%; padding: 0 3%; font-size: 17px; color: #353458; line-height: 1.3; }
+.solutions .solutions__item { float: left; text-align: center; width: 27%; padding: 0 3%; font-size: 17px; color: #353458; line-height: 1.3; -webkit-transition: all 0.2s linear; -moz-transition: all 0.2s linear; -o-transition: all 0.2s linear; transition: all 0.2s linear; position: relative; top: -50px; }
+.solutions .solutions__item + .solutions__item { -webkit-transition-delay: 0.5s; -moz-transition-delay: 0.5s; -o-transition-delay: 0.5s; transition-delay: 0.5s; }
+.solutions .solutions__item + .solutions__item + .solutions__item { -webkit-transition-delay: 1s; -moz-transition-delay: 1s; -o-transition-delay: 1s; transition-delay: 1s; }
+.b-client .solutions .solutions__item { opacity: 0; }
+.b-client .solutions .solutions__item.is-active { opacity: 1; top: 0; }
 .solutions .solutions__item h3 { font-size: 21px; font-weight: normal; font-family: asemi, sans-serif; font-weight: normal; margin: 20px 0; color: #353458; }
 
 .bottom { background: url(../img/BritishMuseum_2x.jpg) no-repeat 50% 50%; -webkit-background-size: cover; -o-background-size: cover; background-size: cover; height: 100vh; min-height: 700px; z-index: 1000; position: relative; -webkit-transform: translate3d(0, 0, 0); -moz-transform: translate3d(0, 0, 0); -ms-transform: translate3d(0, 0, 0); -o-transform: translate3d(0, 0, 0); transform: translate3d(0, 0, 0); }
-.b-client .bottom { background-image: url(../img/path.jpg); }
+.bottom .bottom__icon { background: url("../img/svg/Cubits_globe_stroke.svg") no-repeat 0 0; -moz-background-size: 300px 300px; -webkit-background-size: 300px 300px; background-size: 300px 300px; width: 300px; height: 300px; display: inline-block; position: absolute; left: 50%; margin-left: -150px; bottom: 350px; }
+.b-client .bottom { background: #fafafa url(../img/Hand_solo_resize.jpg) no-repeat 50% 90%; -webkit-background-size: cover; -o-background-size: cover; background-size: cover; }
 .bottom .in { height: 100vh; min-height: 700px; }
 .bottom .getstarted { background: rgba(249, 252, 253, 0.8); width: 904px; position: absolute; left: 50%; top: 50%; margin-left: -500px; margin-top: -120px; text-align: center; padding: 13px 25px 23px 25px; }
-.b-client .bottom .getstarted { margin-top: -300px; background: transparent; }
+.b-client .bottom .getstarted { margin-top: -300px; background: transparent; margin-top: 0; bottom: 0px; top: auto; }
 .bottom .getstarted h3 { font-size: 36px; color: #353558; font-weight: normal; margin-bottom: 29px; font-family: amed, sans-serif; font-weight: normal; }
-.b-client .bottom .getstarted h3 { color: white; text-shadow: 1px 1px 1px #7a849f; }
+.b-client .bottom .getstarted h3 { font-size: 25px; }
 
 footer { background: #f9fcfd; font-size: 21px; color: #455473; padding: 75px 0 20px; text-align: center; z-index: 1000; position: relative; color: #353558; -webkit-transform: translate3d(0, 0, 0); -moz-transform: translate3d(0, 0, 0); -ms-transform: translate3d(0, 0, 0); -o-transform: translate3d(0, 0, 0); transform: translate3d(0, 0, 0); }
 
