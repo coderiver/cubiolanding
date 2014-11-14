@@ -41,7 +41,7 @@ body { font-family: areg, sans-serif; font-weight: normal; font-size: 12px; line
 .in { position: relative; }
 
 body { background: #f8f8f8; }
-body.b-client { background: #f8f8f8; }
+body.b-client { background: #fafafa; }
 
 .header { position: fixed; top: 0; left: 0; width: 100%; z-index: 1200; -webkit-transition: all 0.4s ease; -moz-transition: all 0.4s ease; -o-transition: all 0.4s ease; transition: all 0.4s ease; }
 .header.is-active { background: rgba(53, 53, 88, 0.8); }
@@ -80,6 +80,7 @@ body.b-client { background: #f8f8f8; }
 .start__bottomlinks { float: left; height: 70px; line-height: 70px; color: white; list-style: none; }
 .start__bottomlinks li { float: left; }
 .start__bottomlinks a { float: left; font-size: 15px; color: white; text-decoration: none; margin-right: 31px; }
+.b-client .start__bottomlinks a { color: #353458; }
 .start__bottomlinks.is-right { float: right; }
 .start__bottomlinks.is-right a { margin-right: 0; margin-left: 31px; }
 
