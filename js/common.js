@@ -35,24 +35,31 @@ $(document).ready(function() {
 
 
 	if($('.scr1').length>0){
-		$('.scr1 .scr__wrappics').sticky({topSpacing:80});
+		// $('.scr1 .scr__wrappics').sticky({topSpacing:120});
 
-		toggler =  $(".scr2").offset().top;
+        toggler =  $(".scr2").offset().top;
+		toggler1 =  $(".scr1").offset().top;
 
 		$(window).scroll(function(event) {
+            if($(window).scrollTop()>toggler1){
+                $('.scr__wrappics').addClass('is-fixed');
+            }
+            else{
+                $('.scr__wrappics').removeClass('is-fixed');
+            }
 			if($(window).scrollTop()>toggler - 400){
 				$('.scr__wrappics').addClass('is-showed2');
 			}
 			else{
 				$('.scr__wrappics').removeClass('is-showed2');
 			}
-            console.log(toggler+'===='+$(window).scrollTop());
-            if($(window).scrollTop()>toggler){
-                $('.scr__wrappics').addClass('notfixed');
-            }
-            else{
-                $('.scr__wrappics').removeClass('notfixed');
-            }
+            // console.log(toggler+'===='+$(window).scrollTop());
+            // if($(window).scrollTop()>toggler){
+            //     $('.scr__wrappics').addClass('notfixed');
+            // }
+            // else{
+            //     $('.scr__wrappics').removeClass('notfixed');
+            // }
             
 		});
 	}
@@ -90,143 +97,6 @@ $(document).ready(function() {
 			}
 		});
 
-
-
-
-	
-    
-
-	
-
-
-
-	$('.first').scroolly([
-        {
-            alias: 'before',
-            from: '',
-            to: 'con-top  = top',
-            css: {
-                position: 'static'
-            }
-        },
-        {
-            alias: 'fixing',
-            from: 'con-top = top',
-            to: 'con-top +500 = top',
-            css: {
-                position: 'fixed',
-                top: '0',
-                bottom: ''
-            }
-//                    onScroll: function($el, offset, length)
-        },
-        {
-            alias: 'unfixing',
-            from: 'con-top +500 = top',
-            to: 'doc-bottom',
-            css: {
-                position: 'absolute',
-                top: '500px',
-                bottom: '0'
-                        
-            }
-        }
-    ], $('.staging'));
-
-	$('.second').scroolly([
-        {
-            alias: 'before',
-            from: '',
-            to: 'con-top + 1400  = top',
-            css: {
-                position: 'absolute',
-                top: "1400px"
-            }
-        },
-        {
-            alias: 'fixing',
-            from: 'con-top + 1400 = top',
-            to: 'con-top +1900 = top',
-            css: {
-                position: 'fixed',
-                top: '0',
-                bottom: ''
-            }
-//                    onScroll: function($el, offset, length)
-        },
-        {
-            alias: 'unfixing',
-            from: 'con-top +1900 = top',
-            to: 'doc-bottom',
-            css: {
-                position: 'absolute',
-                top: '1900px',
-                bottom: '0'
-                        
-            }
-        }
-    ], $('.staging'));
-
-    $('.third').scroolly([
-        {
-            alias: 'before',
-            from: '',
-            to: 'con-top + 2700  = top',
-            css: {
-                position: 'absolute',
-                top: "2700px"
-            }
-        },
-        {
-            alias: 'fixing',
-            from: 'con-top + 2700 = top',
-            to: 'con-top +3400 = top',
-            css: {
-                position: 'fixed',
-                top: '0',
-                bottom: ''
-            }
-//                    onScroll: function($el, offset, length)
-        },
-        {
-            alias: 'unfixing',
-            from: 'con-top +3400 = top',
-            to: 'doc-bottom',
-            css: {
-                position: 'absolute',
-                top: '3400px',
-                bottom: '0'
-                        
-            }
-        }
-    ], $('.staging'));
-
-	$('.cube_real').scroolly([
-        {
-            alias: 'before',
-            from: '',
-            to: 'con-top + 2900  = top',
-            css: {
-                position: 'fixed',
-                top: "150px"
-            },
-
-        },
-        {
-            alias: 'fixing',
-            from: 'con-top + 3400 = top',
-            to: 'con-top +6400 = top',
-            css: {
-                position: 'absolute',
-                top: '3300px',
-                bottom: ''
-            },
-                   onCheckIn: function($element, rule){
-                    $(".cube_fake").show();
-                    $(".cube_real").hide();
-                   }
-        }
-    ], $('.staging'));
 
     }
 });
