@@ -44,6 +44,7 @@ body { background: #f8f8f8; }
 body.b-client { background: #fafafa; }
 
 .header { position: fixed; top: 0; left: 0; width: 100%; z-index: 1200; -webkit-transition: all 0.4s ease; -moz-transition: all 0.4s ease; -o-transition: all 0.4s ease; transition: all 0.4s ease; }
+.header.header_blue { background: #353557 !important; }
 .header.is-active { background: rgba(53, 53, 88, 0.8); }
 .b-client .header.is-active { background: rgba(249, 252, 253, 0.8); }
 .header .header__in { position: relative; height: 77px; }
@@ -417,7 +418,7 @@ body { min-width: 1180px; }
 
 .third { overflow: hidden; }
 
-.poster { background: #353557 url(../img/poster.svg) no-repeat 50% 50%; -webkit-background-size: cover; -o-background-size: cover; background-size: cover; height: 470px; -o-background-size: cover; background-size: cover; }
+.poster { background: url(../img/westminster.jpg) no-repeat 50% 100%; -webkit-background-size: cover; -o-background-size: cover; background-size: cover; height: 470px; -o-background-size: cover; background-size: cover; }
 .poster.poster_team { background: black url(../img/team.jpg) no-repeat 50% 100%; -webkit-background-size: cover; }
 
 .in_about { width: 750px; }
