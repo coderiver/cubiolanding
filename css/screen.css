@@ -51,11 +51,12 @@ body.b-client { background: #fafafa; }
 
 .start { height: 100vh; position: relative; z-index: 400; }
 .b-client .start { background: #f8fcfd url(../img/money03_1650.jpg) no-repeat 50% 50%; -webkit-background-size: cover; -o-background-size: cover; background-size: cover; }
-.start .video { position: absolute; top: 0; left: 0; right: 0; bottom: 0; z-index: 1; background: url(../img/westminster.jpg) no-repeat 50% 50%; -webkit-background-size: cover; -o-background-size: cover; background-size: cover; }
-.start .video video { position: absolute; right: 0; bottom: 0; min-width: 100%; min-height: 100%; width: auto; height: auto; }
-@media (max-width: 1000px) { .start .video video { display: none; } }
-.start .video .video__over { position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: black; opacity: 0.4; }
 .start .in { z-index: 20; }
+
+.video { position: fixed; top: 0; left: 0; right: 0; bottom: 0; z-index: -100; background: url(../img/westminster.jpg) no-repeat 50% 50%; -webkit-background-size: cover; -o-background-size: cover; background-size: cover; }
+.video video { position: absolute; right: 0; bottom: 0; min-width: 100%; min-height: 100%; width: auto; height: auto; }
+@media (max-width: 1000px) { .video video { display: none; } }
+.video .video__over { position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: black; opacity: 0.4; }
 
 .start__links { position: absolute; right: 0; top: 10px; text-align: right; z-index: 20; }
 .start__links a { font-size: 15px; text-transform: uppercase; text-decoration: none; letter-spacing: 2px; display: inline-block; color: white; padding: 15px 18px; vertical-align: middle; }
@@ -98,7 +99,7 @@ body.b-client { background: #fafafa; }
 .b-client .now h2, .b-client .now h1 { color: #353656; }
 .now p { font-family: amed, sans-serif; font-weight: normal; font-size: 25px; color: #353659; color: white; line-height: 1.5; margin-bottom: 18px; }
 .b-client .now p { color: #353656; }
-.now .now__cube { background: url("../img/svg/cube.svg") no-repeat 0 0; -moz-background-size: 116px 100px; -webkit-background-size: 116px 100px; background-size: 116px 100px; width: 116px; height: 100px; display: inline-block; display: inline-block; -webkit-background-size: contain; -o-background-size: contain; background-size: contain; margin-bottom: 20px; }
+.now .now__cube { background: url("../img/svg/Cubits_Landing_Cube.svg") no-repeat 0 0; -moz-background-size: 116px 100px; -webkit-background-size: 116px 100px; background-size: 116px 100px; width: 116px; height: 100px; display: inline-block; display: inline-block; -webkit-background-size: contain; -o-background-size: contain; background-size: contain; margin-bottom: 20px; }
 
 .form { font-size: 0; }
 .form .form__input { border: 2px solid #1db6b3; width: 346px; height: 64px; font-size: 16px; padding-top: 0px; line-height: normal; padding-left: 15px; padding-right: 15px; font-family: areg, sans-serif; font-weight: normal; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; margin-right: 10px; vertical-align: middle; background: rgba(255, 255, 255, 0.5); }
@@ -145,6 +146,8 @@ body.b-client { background: #fafafa; }
 @media only screen and (-webkit-min-device-pixel-ratio: 1.3), only screen and (min--moz-device-pixel-ratio: 1.3), only screen and (-o-min-device-pixel-ratio: 1.3 / 1), only screen and (min-resolution: 125dpi), only screen and (min-resolution: 1.3dppx) { .your .your__pic img { display: none; } }
 .your .your__pic .retina { display: none; }
 @media only screen and (-webkit-min-device-pixel-ratio: 1.3), only screen and (min--moz-device-pixel-ratio: 1.3), only screen and (-o-min-device-pixel-ratio: 1.3 / 1), only screen and (min-resolution: 125dpi), only screen and (min-resolution: 1.3dppx) { .your .your__pic .retina { display: block; } }
+
+.scrs { background: #f8f8f8; }
 
 .scr { height: 800px; min-height: 720px; background: #f8f8f8; position: relative; background: transparent; z-index: 100; }
 .scr.scr1 { z-index: 50; }
