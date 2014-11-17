@@ -246,7 +246,7 @@ body
 			color: #353656 
 	p
 		+amed
-		font-size: 22px 
+		font-size: 25px 
 		color: #353659
 		color: #fff 
 		line-height: 1.5  
@@ -277,11 +277,16 @@ body
 		margin-right: 10px 
 		vertical-align: middle
 		background: rgba(#fff,.5) 
-		.b-client &
-			border-color: #EA284C 
 		+placeholder
 			font-size: 16px 
-			color: #4D4D67 
+			color: #fff 
+		.b-client &
+			border-color: #EA284C 
+			+placeholder
+				color: #4D4D67 
+		
+
+		
 	
 	.form__submit
 		height: 60px + 4px
@@ -379,9 +384,10 @@ body
 		h2,h1
 			color: #F8CF5E
 			color: #353556 
-			font-size: 45px  
+			font-size: 46px  
 			font-weight: normal
-			+asemi
+			// +abold 
+			+pbold
 			text-align: center
 			text-transform: uppercase
 		p
@@ -396,6 +402,7 @@ body
 		margin-left: -510px  
 		width: 1020px  
 		+svg(cubits_ipad,1020,357)
+		background: #F8FCFD url(#{$assetPath}cubits_ipad.png) no-repeat 50% 100%
 		height: 357px 
 		-webkit-background-size: cover 
 		-o-background-size: cover 
@@ -543,10 +550,10 @@ body
 	position: relative
 	+gpu
 	.bottom__icon
-		+svg(Cubits_globe_stroke,300,300)
+		+svg(Cubits_globe_stroke,390,390)
 		position: absolute
 		left: 50%
-		margin-left: -150px  
+		margin-left: -200px  
 		bottom: 45%
 	.b-client &
 		// background-image: url(#{$assetPath}path.jpg)
