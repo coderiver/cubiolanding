@@ -38,7 +38,8 @@ $(document).ready(function() {
 		// $('.scr1 .scr__wrappics').sticky({topSpacing:120});
 
         toggler =  $(".scr2").offset().top;
-		toggler1 =  $(".scr1").offset().top;
+        toggler1 =  $(".scr1").offset().top;
+		toggler2 =  $(".scr2 .scr__text").offset().top;
 
 		$(window).scroll(function(event) {
             if($(window).scrollTop()>toggler1){
@@ -53,13 +54,12 @@ $(document).ready(function() {
 			else{
 				$('.scr__wrappics').removeClass('is-showed2');
 			}
-            // console.log(toggler+'===='+$(window).scrollTop());
-            // if($(window).scrollTop()>toggler){
-            //     $('.scr__wrappics').addClass('notfixed');
-            // }
-            // else{
-            //     $('.scr__wrappics').removeClass('notfixed');
-            // }
+            if($(window).scrollTop()>toggler2){
+                $('.scr2 .scr__text').addClass('is-fixed')
+            }
+            else{
+                $('.scr2 .scr__text').removeClass('is-fixed');
+            }
             
 		});
 	}

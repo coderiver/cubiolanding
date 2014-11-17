@@ -422,6 +422,12 @@ body
 	&.scr2
 		z-index: 100 
 		background: transparent 
+		.scr__text
+			&.is-fixed
+				.scr__textinner
+					position: fixed
+					top: 200px 
+					width: 514px 
 		
 	.in__content
 		position: absolute
@@ -541,7 +547,7 @@ body
 		position: absolute
 		left: 50%
 		margin-left: -150px  
-		bottom: 350px 
+		bottom: 45%
 	.b-client &
 		// background-image: url(#{$assetPath}path.jpg)
 		background: #FAFAFA url(#{$assetPath}Hand_solo_resize.jpg) no-repeat 50% 90%

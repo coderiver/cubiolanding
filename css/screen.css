@@ -144,6 +144,7 @@ body.b-client { background: #fafafa; }
 .scr { height: 100vh; min-height: 720px; background: #f8f8f8; position: relative; background: transparent; z-index: 100; }
 .scr.scr1 { z-index: 50; }
 .scr.scr2 { z-index: 100; background: transparent; }
+.scr.scr2 .scr__text.is-fixed .scr__textinner { position: fixed; top: 200px; width: 514px; }
 .scr .in__content { position: absolute; width: 1180px; }
 .scr .scr__wrappics { position: relative; z-index: 300; }
 .scr .scr__wrappics.is-fixed { position: fixed; top: 120px; }
@@ -182,7 +183,7 @@ body.b-client { background: #fafafa; }
 .solutions .solutions__item h3 { font-size: 21px; font-weight: normal; font-family: asemi, sans-serif; font-weight: normal; margin: 20px 0; color: #353458; }
 
 .bottom { background: url(../img/BritishMuseum_2x.jpg) no-repeat 50% 50%; -webkit-background-size: cover; -o-background-size: cover; background-size: cover; height: 100vh; min-height: 700px; z-index: 1000; position: relative; -webkit-transform: translate3d(0, 0, 0); -moz-transform: translate3d(0, 0, 0); -ms-transform: translate3d(0, 0, 0); -o-transform: translate3d(0, 0, 0); transform: translate3d(0, 0, 0); }
-.bottom .bottom__icon { background: url("../img/svg/Cubits_globe_stroke.svg") no-repeat 0 0; -moz-background-size: 300px 300px; -webkit-background-size: 300px 300px; background-size: 300px 300px; width: 300px; height: 300px; display: inline-block; position: absolute; left: 50%; margin-left: -150px; bottom: 350px; }
+.bottom .bottom__icon { background: url("../img/svg/Cubits_globe_stroke.svg") no-repeat 0 0; -moz-background-size: 300px 300px; -webkit-background-size: 300px 300px; background-size: 300px 300px; width: 300px; height: 300px; display: inline-block; position: absolute; left: 50%; margin-left: -150px; bottom: 45%; }
 .b-client .bottom { background: #fafafa url(../img/Hand_solo_resize.jpg) no-repeat 50% 90%; -webkit-background-size: cover; -o-background-size: cover; background-size: cover; }
 .bottom .in { height: 100vh; min-height: 700px; }
 .bottom .getstarted { background: rgba(249, 252, 253, 0.8); width: 904px; position: absolute; left: 50%; top: 50%; margin-left: -500px; margin-top: -120px; text-align: center; padding: 13px 25px 23px 25px; }
