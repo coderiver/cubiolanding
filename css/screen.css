@@ -146,8 +146,9 @@ body.b-client { background: #fafafa; }
 .your .your__pic .retina { display: none; }
 @media only screen and (-webkit-min-device-pixel-ratio: 1.3), only screen and (min--moz-device-pixel-ratio: 1.3), only screen and (-o-min-device-pixel-ratio: 1.3 / 1), only screen and (min-resolution: 125dpi), only screen and (min-resolution: 1.3dppx) { .your .your__pic .retina { display: block; } }
 
-.scr { height: 100vh; min-height: 720px; background: #f8f8f8; position: relative; background: transparent; z-index: 100; }
+.scr { height: 800px; min-height: 720px; background: #f8f8f8; position: relative; background: transparent; z-index: 100; }
 .scr.scr1 { z-index: 50; }
+.scr.scr1.at-bottom .scr__wrappics.is-fixed { position: absolute; top: 890px; }
 .scr.scr2 { z-index: 100; background: transparent; }
 .scr.scr2 .scr__text.is-fixed .scr__textinner { position: fixed; top: 200px; width: 514px; }
 .scr .in__content { position: absolute; width: 1180px; }

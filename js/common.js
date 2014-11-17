@@ -39,7 +39,7 @@ $(document).ready(function() {
 
         toggler =  $(".scr2").offset().top;
         toggler1 =  $(".scr1").offset().top;
-		toggler2 =  $(".scr2 .scr__text").offset().top;
+		toggler2 =  $(".scr2 .scr__text").offset().top - 150;
 
 		$(window).scroll(function(event) {
             if($(window).scrollTop()>toggler1){
@@ -55,10 +55,12 @@ $(document).ready(function() {
 				$('.scr__wrappics').removeClass('is-showed2');
 			}
             if($(window).scrollTop()>toggler2){
-                $('.scr2 .scr__text').addClass('is-fixed')
+                // $('.scr2 .scr__text').addClass('is-fixed');
+                $('.scr1').addClass('at-bottom');
             }
             else{
-                $('.scr2 .scr__text').removeClass('is-fixed');
+                // $('.scr2 .scr__text').removeClass('is-fixed');
+                $('.scr1').removeClass('at-bottom');
             }
             
 		});

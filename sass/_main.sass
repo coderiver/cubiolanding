@@ -417,7 +417,8 @@ body
 			+hdpi
 				display: block
 .scr
-	height: 100vh
+	// height: 100vh
+	height: 800px 
 	min-height: 720px 
 	background: #f8f8f8 
 	position: relative
@@ -426,6 +427,11 @@ body
 	
 	&.scr1
 		z-index: 50
+		&.at-bottom
+			.scr__wrappics
+				&.is-fixed
+					position: absolute
+					top: 1040px - 150px
 	&.scr2
 		z-index: 100 
 		background: transparent 
