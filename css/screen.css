@@ -431,6 +431,7 @@ body { min-width: 1180px; }
 
 .companytext h3 { text-align: center; margin-bottom: 36px; font-weight: normal; font-size: 31px; color: #353458; font-family: areg, sans-serif; font-weight: normal; }
 .companytext p { margin-bottom: 1em; font-size: 21px; color: #353458; font-family: areg, sans-serif; font-weight: normal; line-height: 1.4; }
+.companytext .companyinfo { width: 530px; margin: 40px auto; font-size: 15px; font-family: areg, sans-serif; font-weight: normal; color: #353458; color: #c5c6cd; }
 
 .team ul { list-style: none; margin-right: -3px; margin-bottom: 30px; *zoom: 1; }
 .team ul:after { content: " "; display: table; clear: both; }
