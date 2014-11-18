@@ -179,7 +179,7 @@ body.b-client { background: #fafafa; }
 
 .icon-Safe { display: inline-block; background: url("../img/svg/Safe.svg") no-repeat 0 0; -moz-background-size: 130px 130px; -webkit-background-size: 130px 130px; background-size: 130px 130px; width: 130px; height: 130px; display: inline-block; }
 
-.solutions { background: white; z-index: 1000; position: relative; -webkit-transform: translate3d(0, 0, 0); -moz-transform: translate3d(0, 0, 0); -ms-transform: translate3d(0, 0, 0); -o-transform: translate3d(0, 0, 0); transform: translate3d(0, 0, 0); }
+.solutions { background: white; z-index: 1000; position: relative; }
 .solutions .in { padding: 61px 0 85px; *zoom: 1; }
 .solutions .in:after { content: " "; display: table; clear: both; }
 .b-client .solutions .in { background: white; padding-top: 140px; padding-bottom: 140px; }
@@ -191,7 +191,7 @@ body.b-client { background: #fafafa; }
 .b-client .solutions .solutions__item.is-active { opacity: 1; top: 0; }
 .solutions .solutions__item h3 { font-size: 21px; font-weight: normal; font-family: asemi, sans-serif; font-weight: normal; margin: 20px 0; color: #353458; }
 
-.bottom { background: url(../img/BritishMuseum_2x.jpg) no-repeat 50% 50%; -webkit-background-size: cover; -o-background-size: cover; background-size: cover; height: 100vh; min-height: 700px; z-index: 1000; position: relative; -webkit-transform: translate3d(0, 0, 0); -moz-transform: translate3d(0, 0, 0); -ms-transform: translate3d(0, 0, 0); -o-transform: translate3d(0, 0, 0); transform: translate3d(0, 0, 0); }
+.bottom { background: url(../img/BritishMuseum_2x.jpg) no-repeat 50% 50%; -webkit-background-size: cover; -o-background-size: cover; background-size: cover; height: 100vh; min-height: 700px; z-index: 1000; position: relative; }
 .bottom .bottom__icon { background: url("../img/svg/Cubits_globe_stroke.svg") no-repeat 0 0; -moz-background-size: 390px 390px; -webkit-background-size: 390px 390px; background-size: 390px 390px; width: 390px; height: 390px; display: inline-block; position: absolute; left: 50%; margin-left: -200px; bottom: 45%; }
 .b-client .bottom { background: #fafafa url(../img/Hand_solo_resize.jpg) no-repeat 50% 90%; -webkit-background-size: cover; -o-background-size: cover; background-size: cover; }
 .bottom .in { height: 100vh; min-height: 700px; }
@@ -200,7 +200,7 @@ body.b-client { background: #fafafa; }
 .bottom .getstarted h3 { font-size: 36px; color: #353558; font-weight: normal; margin-bottom: 29px; font-family: amed, sans-serif; font-weight: normal; }
 .b-client .bottom .getstarted h3 { font-size: 25px; }
 
-footer { background: #f9fcfd; font-size: 21px; color: #455473; padding: 75px 0 20px; text-align: center; z-index: 1000; position: relative; color: #353558; -webkit-transform: translate3d(0, 0, 0); -moz-transform: translate3d(0, 0, 0); -ms-transform: translate3d(0, 0, 0); -o-transform: translate3d(0, 0, 0); transform: translate3d(0, 0, 0); }
+footer { background: #f9fcfd; font-size: 21px; color: #455473; padding: 75px 0 20px; text-align: center; z-index: 1000; position: relative; color: #353558; }
 
 .overlay { position: absolute; top: 0px; background: #768395; opacity: 0.9; bottom: 0; right: 0; left: 0; z-index: 1000; display: none; position: fixed; }
 
