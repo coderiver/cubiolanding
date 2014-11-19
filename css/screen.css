@@ -53,7 +53,7 @@ body.b-client { background: #fafafa; }
 .b-client .start { background: #f8fcfd url(../img/money03_1650.jpg) no-repeat 50% 50%; -webkit-background-size: cover; -o-background-size: cover; background-size: cover; }
 .start .in { z-index: 20; }
 
-.video { position: absolute; top: 0; left: 0; right: 0; bottom: 0; z-index: -100; background: url(../img/westminster.jpg) no-repeat 50% 50%; -webkit-background-size: cover; -o-background-size: cover; background-size: cover; }
+.video { position: absolute; position: fixed; -webkit-transform: translate3d(0, 0, 0); -moz-transform: translate3d(0, 0, 0); -ms-transform: translate3d(0, 0, 0); -o-transform: translate3d(0, 0, 0); transform: translate3d(0, 0, 0); top: 0; left: 0; right: 0; bottom: 0; z-index: -100; background: url(../img/westminster.jpg) no-repeat 50% 50%; -webkit-background-size: cover; -o-background-size: cover; background-size: cover; }
 .video video { position: absolute; right: 0; bottom: 0; min-width: 100%; min-height: 100%; width: auto; height: auto; }
 @media (max-width: 1000px) { .video video { display: none; } }
 .video .video__over { position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: black; opacity: 0.4; }
@@ -93,6 +93,7 @@ body.b-client { background: #fafafa; }
 .start .in { height: 100vh; }
 
 .now { width: 720px; margin: 0 auto; padding-top: 200px; text-align: center; }
+.now.now_m { padding-top: 0; position: absolute; left: 50%; top: 50%; margin-top: -170px; margin-left: -360px; }
 .b-client .now { background: rgba(250, 250, 250, 0.65); top: 50%; padding: 10px; margin-top: -130px; position: absolute; width: 750px; margin-left: -375px; left: 50%; }
 .b-client .now .form { margin-top: 20px; }
 .now h2, .now h1 { font-weight: normal; font-family: bold, sans-serif; font-weight: normal; font-size: 46px; color: #2a2946; color: white; text-transform: uppercase; }
@@ -191,7 +192,7 @@ body.b-client { background: #fafafa; }
 .b-client .solutions .solutions__item.is-active { opacity: 1; top: 0; }
 .solutions .solutions__item h3 { font-size: 21px; font-weight: normal; font-family: asemi, sans-serif; font-weight: normal; margin: 20px 0; color: #353458; }
 
-.bottom { background: url(../img/BritishMuseum_2x.jpg) no-repeat 50% 50%; -webkit-background-size: cover; -o-background-size: cover; background-size: cover; height: 100vh; min-height: 700px; z-index: 1000; position: relative; }
+.bottom { background: #f8f8f8 url(../img/BritishMuseum_2x.jpg) no-repeat 50% 50%; -webkit-background-size: cover; -o-background-size: cover; background-size: cover; height: 100vh; min-height: 700px; z-index: 1000; position: relative; }
 .bottom .bottom__icon { background: url("../img/svg/Cubits_globe_stroke.svg") no-repeat 0 0; -moz-background-size: 390px 390px; -webkit-background-size: 390px 390px; background-size: 390px 390px; width: 390px; height: 390px; display: inline-block; position: absolute; left: 50%; margin-left: -200px; bottom: 45%; }
 .b-client .bottom { background: #fafafa url(../img/Hand_solo_resize.jpg) no-repeat 50% 90%; -webkit-background-size: cover; -o-background-size: cover; background-size: cover; }
 .bottom .in { height: 100vh; min-height: 700px; }

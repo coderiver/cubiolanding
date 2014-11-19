@@ -52,6 +52,8 @@ body
 		z-index: 20     
 .video
 	position: absolute
+	position: fixed
+	+gpu
 	top: 0
 	left: 0
 	right: 0
@@ -222,7 +224,13 @@ body
 	margin: 0 auto 
 	padding-top: 200px 
 	text-align: center
-	
+	&.now_m
+		padding-top: 0
+		position: absolute
+		left: 50%
+		top: 50%
+		margin-top: -170px    
+		margin-left: -360px 
 	.b-client &
 		background: rgba(250,250,250,0.65)
 		// padding: 10px 
@@ -550,7 +558,7 @@ body
 			margin: 20px 0 
 			color: #353458 
 .bottom
-	background: url(#{$assetPath}BritishMuseum_2x.jpg) no-repeat 50% 50%
+	background: #F8F8F8 url(#{$assetPath}BritishMuseum_2x.jpg) no-repeat 50% 50%
 	-webkit-background-size: cover 
 	-o-background-size: cover 
 	background-size: cover 
