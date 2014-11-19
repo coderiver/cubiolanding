@@ -53,7 +53,7 @@ body.b-client { background: #fafafa; }
 .b-client .start { background: #f8fcfd url(../img/money03_1650.jpg) no-repeat 50% 50%; -webkit-background-size: cover; -o-background-size: cover; background-size: cover; }
 .start .in { z-index: 20; }
 
-.video { position: fixed; top: 0; left: 0; right: 0; bottom: 0; z-index: -100; background: url(../img/westminster.jpg) no-repeat 50% 50%; -webkit-background-size: cover; -o-background-size: cover; background-size: cover; }
+.video { position: absolute; top: 0; left: 0; right: 0; bottom: 0; z-index: -100; background: url(../img/westminster.jpg) no-repeat 50% 50%; -webkit-background-size: cover; -o-background-size: cover; background-size: cover; }
 .video video { position: absolute; right: 0; bottom: 0; min-width: 100%; min-height: 100%; width: auto; height: auto; }
 @media (max-width: 1000px) { .video video { display: none; } }
 .video .video__over { position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: black; opacity: 0.4; }
