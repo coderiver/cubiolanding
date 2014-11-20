@@ -173,15 +173,62 @@
 
 
 <!-- begin popup   -->
-<div class="popup " id="popup-signup">
+<div class="popup popup_wide " id="popup-signup">
 	<div class="popup__close">X</div>
 	<div class="popup__content">
 		<div class="popup__title">Signup</div>
 		<div class="popup__inside">
+			
+			<!-- begin reg  -->
+			<div class="reg">
+				<div class="reg__welcome"><strong>Welcome to Cubio.</strong> Let's get to know each other.</div>
 
+				<div class="input input_small">
+					<div class="input__label">What's your full name?</div>
+					<input type="text" name="" placeholder="ex. Max Power" id="">
+					<i class="input__icon icon-user"></i>
+					<div class="error">Please enter your full name</div>
+				</div>
 
+				<div class="hr"></div>
+
+				<div class="input input_small">
+					<div class="input__label">Your desired password? <span>(with at least 8 characters and 1 special character)</span></div>
+					<input type="password" name="" placeholder="ex. Max Power" id="">
+					<i class="input__icon icon-lock"></i>
+					<div class="errorstatus is-ok"><i class="icon-ok"></i></div>
+				</div>
+
+				<div class="input input_small">
+					<input type="password" name="" placeholder="ex. Max Power" id="">
+					<i class="input__icon icon-lock"></i>
+					<div class="errorstatus"><i class="icon-close"></i>Passwords don't match</div>
+				</div>
+
+				<div class="strength"><i style="width:70%"></i></div>
+				<div class="hr"></div>
+				<!-- begin prefer -->
+				<div class="prefer">
+					<label for="">And your preferred currency? <span>(Can be changed later)</span></label>
+					<div class="select js-select">
+						<select name="" id=""><option value="">Eur</option><option value="">USD</option></select>
+						<input type="text" class="select__value" value="USD">
+						<i class="icon-arrowdown"></i>
+					</div>
+
+				</div>
+				<!-- end prefer -->
+
+				<div class="privacypolicy">
+					By clicking Start, you agree to our <a href="#">terms</a> and <a href="#">privacy policy</a>
+				</div>
+
+				<div class="submit">START   USING   CUBIO   WALLET</div>
+			</div>
+			<!-- end reg -->
+		
 		</div>
-		<div class="resend">succes</div>
+
 	</div>
 </div>
 <!-- end popup  -->
@@ -202,7 +249,6 @@
 			</div>
 
 		</div>
-		<div class="resend">Resend email</div>
 	</div>
 </div>
 <!-- end popup  -->
