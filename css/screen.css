@@ -258,6 +258,82 @@ footer { background: #f9fcfd; font-size: 21px; color: #455473; padding: 75px 0 2
 
 .resend { background: white; border-top: 1px solid #ebeff6; height: 70px; line-height: 70px; font-size: 16px; color: #00bfbc; text-decoration: none; cursor: pointer; text-align: center; font-family: areg, sans-serif; font-weight: normal; }
 
+.input { display: block; position: relative; }
+.input input { display: block; padding: 0 23px; border: 2px solid #95c4d1; border-radius: 2px; box-shadow: inset 3px 3px 0 #eaeaea; background: white; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; height: 66px; line-height: 66px; width: 100%; font-family: amed, sans-serif; font-weight: normal; font-size: 31px; color: #cbcbcb; color: #353556; }
+.input input:focus { border-color: #1ebebb; color: #353556; }
+.input input:focus + .input__currency { background-color: #1ebebb; color: white; }
+.input input[disabled] { color: #cbcbcb !important; }
+.input.input_icon input { padding-right: 70px; }
+.input.is-tilda input, .input.with-tilda input { padding-left: 60px; }
+.input .input__tilda { position: absolute; left: 26px; top: 0; height: 66px; line-height: 66px; font-size: 31px; color: #677689; font-family: amed, sans-serif; font-weight: normal; display: none; }
+.input.with-tilda .input__tilda, .input.is-tilda .input__tilda { display: block; }
+.input .input__currency { width: 60px; height: 46px; line-height: 46px; text-align: center; position: absolute; right: 14px; top: 10px; border-radius: 2px; background: #95c4d1; font-size: 17px; font-family: asemi, sans-serif; font-weight: normal; color: white; }
+.input .input__currency.input__currency_subtle { background: transparent; color: #1ebebb; }
+.input .input__currency.input__currency_drop { width: 75px; background: #1ebebb; cursor: pointer; }
+.input .input__currency.input__currency_drop .input__currencydrop { display: none; }
+.input .input__currency.input__currency_drop .input__currencyvalue { position: relative; z-index: 3; display: inline-block; }
+.input .input__currency.input__currency_drop i { display: inline-block; color: white; vertical-align: middle; font-size: 12px; }
+.input .input__currency.input__currency_drop.is-opendrop { z-index: 10; }
+.input .input__currency.input__currency_drop.is-opendrop .input__currencyvalue { z-index: 12; color: #1ebebb; }
+.input .input__currency.input__currency_drop.is-opendrop i { color: #353556; position: relative; z-index: 20; }
+.input .input__currency.input__currency_drop.is-opendrop .input__currencydrop { display: block; position: absolute; left: 0; top: 0; right: 0; background: white; padding-top: 46px; z-index: 11; border: 2px solid #1ebebb; }
+.input .input__currency.input__currency_drop.is-opendrop .input__currencydrop ul { list-style: none; }
+.input .input__currency.input__currency_drop.is-opendrop .input__currencydrop li { border-top: 1px solid #e6eef2; height: 27px; line-height: 27px; cursor: pointer; background: white; text-align: center; color: #575770; text-transform: uppercase; font-size: 12px; font-family: amed, sans-serif; font-weight: normal; }
+.input .input__currency.input__currency_drop.is-opendrop .input__currencydrop li:hover { background: #f9f9f9; color: #1ebebb; }
+.input .input__currency.input__currency_drop.is-opendrop .input__currencydrop li:first-child { border-top: none; }
+.input .input__type { position: absolute; right: 0; top: 0; bottom: 0; text-align: center; line-height: 47px; width: 50px; text-align: center; background: #95c4d1; color: white; font-size: 25px; }
+.input.input_small { width: 340px; margin: 0 auto 15px auto; }
+.input.input_small.input_phone input { padding-left: 70px; }
+.input.input_small.input_phone .input__phonecode { position: absolute; left: 0; top: 0; bottom: 0; background: #95c4d1; border-top-left-radius: 4px; border-bottom-left-radius: 4px; color: white; line-height: 46px; width: 52px; text-align: center; font-family: asemi, sans-serif; font-weight: normal; font-size: 17px; }
+.input.input_small.input_phone .input__phonecode:before { position: absolute; content: " "; top: 2px; bottom: 2px; width: 3px; right: -3px; background: #eaeaea; }
+.input.input_small .input__label { display: block; font-size: 15px; font-family: amed, sans-serif; font-weight: normal; color: #34495e; margin-bottom: 10px; }
+.input.input_small .input__label span { display: block; font-size: 14px; font-family: aital, sans-serif; font-weight: normal; color: #a4a4b0; }
+.input.input_small input { font-size: 17px; height: 46px; line-height: 46px; line-height: 1; padding: 0 37px 0 17px; padding-top: 0px; line-height: auto; }
+.input.input_small .input__icon { position: absolute; right: 10px; bottom: 6px; top: auto; font-size: 20px; color: #93c4d2; }
+.input.input_smaller { width: 137px !important; display: inline-block; float: left; }
+.input.input_smaller + .input_smaller { margin-right: 16px; }
+.input .input__icon { position: absolute; right: 29px; top: 20px; font-size: 20px; color: #93c4d2; font-size: 25px; }
+.input .input__icon.icon-qr { border: 2px solid #93c4d2; line-height: 1; height: 40px; line-height: 50px; display: inline-block; width: 60px; text-align: center; top: 11px; right: 10px; }
+.input input:focus + .input__icon { color: #179290; }
+.input .error { position: absolute; padding: 14px; background: #f6e0e6; font-family: amed, sans-serif; font-weight: normal; font-size: 13px; color: #ed1847; border-radius: 3px; top: 70px; left: 0; z-index: 200; width: 100%; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; }
+.input .error:before { width: 20px; height: 20px; background: #f6e0e6; content: " "; -ms-transform: rotate(45deg); -webkit-transform: rotate(45deg); transform: rotate(45deg); left: 60px; top: -9px; position: absolute; }
+.input.input_small .error { top: auto; bottom: -50px; }
+.input.input_important input { border-color: #1ebebb; color: #1ebebb; }
+.input.input_error2 input { border-color: #ea294c; }
+.input.input_error2 .error2 { color: #ea294c; font-size: 11px; display: block; padding-top: 4px; white-space: nowrap; }
+
+.popup__inside .errormess { text-align: center; font-size: 13px; font-family: asemi, sans-serif; font-weight: normal; margin-bottom: 14px; color: #ea294c; }
+.popup__inside .input.is-error input { border-color: #ea294c; }
+.popup__inside .popup__in { width: 340px; margin: 0 auto; padding: 50px 0; }
+.popup__inside .popup__in p { margin-bottom: 1em; font-size: 15px; font-family: areg, sans-serif; font-weight: normal; color: #353458; }
+.popup__inside .rememberme { width: 340px; margin: 0 auto; text-align: left; margin-bottom: 20px; *zoom: 1; }
+.popup__inside .rememberme:after { content: " "; display: table; clear: both; }
+.popup__inside .rememberme .field { padding-left: 0; float: left; width: 50%; margin: 0; }
+.popup__inside .rememberme .forgotpassword { float: right; font-family: asemi, sans-serif; font-weight: normal; padding-top: 3px; }
+.popup__inside .rememberme .forgotpassword a { text-decoration: none; color: #00bfbc; font-size: 13px; }
+.popup__inside .donthave { background: white; text-align: center; padding: 20px 0; border-top: 1px solid #ebeff7; font-size: 13px; font-family: areg, sans-serif; font-weight: normal; }
+.popup__inside .donthave a { text-decoration: none; font-family: asemi, sans-serif; font-weight: normal; color: #00bfbc; }
+
+.field { margin-bottom: 23px; position: relative; *zoom: 1; }
+.field:after { content: " "; display: table; clear: both; }
+.field label { float: left; width: 104px; padding-left: 16px; font-size: 17px; font-family: amed, sans-serif; font-weight: normal; color: #34495e; padding-top: 13px; }
+.field .input { float: right; width: 410px; margin-bottom: 0; }
+.field.field_small .input { width: 280px; }
+.field.field_small .smallselect { background: white; width: 280px; }
+.field.field_small label { font-size: 14px; width: auto; padding-top: 15px; }
+.field.field_smaller { margin-bottom: 15px; }
+.field.field_smaller .field__content { float: right; width: 290px; }
+.field.field_smaller label { font-size: 14px; padding-top: 15px; }
+.field.field_smaller .input { width: 100%; }
+.field.field_check { margin: 20px 0; padding-left: 110px; cursor: pointer; }
+.field.field_check .checkbox { display: inline-block; vertical-align: middle; margin-right: 11px; }
+.field.field_check .checkbox input { display: none; }
+.field.field_check .checkbox i { display: inline-block; width: 20px; height: 20px; background: #00bfbc; box-shadow: inset 0 0 0 2px #bccdd5; }
+.field.field_check .checkbox input:checked + i { background: #bccdd5; }
+.field.field_check .label { display: inline-block; font-family: areg, sans-serif; font-weight: normal; font-size: 13px; color: #353458; }
+.field .smallselect { float: right; width: 290px; height: 46px; line-height: 46px; }
+.field .smallselect .smallselect__value { padding-left: 20px; font-family: amed, sans-serif; font-weight: normal; font-size: 17px; }
+
 @font-face { font-family: iconset; src: url("fonts/untitled-font-2.eot"); src: url("fonts/untitled-font-2.eot?#iefix") format("embedded-opentype"), url("fonts/untitled-font-2.woff") format("woff"), url("fonts/untitled-font-2.ttf") format("truetype"); font-weight: normal; font-style: normal; }
 
 [data-icon]:before { font-family: iconset !important; content: attr(data-icon); font-style: normal !important; font-weight: normal !important; font-variant: normal !important; text-transform: none !important; speak: none; line-height: 1; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; color: red; }

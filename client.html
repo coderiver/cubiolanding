@@ -21,7 +21,7 @@
 	<div class="start__exchange">1 BTC <span>▶</span> 329.23 EUR</div>
 	<div class="start__links">
 		<a href="#">Merchants</a>
-		<a href="#">login</a>
+		<a href="#" class="js-popup" data-popup="popup-login">login</a>
 		<a href="#" class="start__signup js-popup" data-popup="popup-signup">Request invite</a>
 	</div>
 </div></div>
@@ -138,29 +138,50 @@
 <div class="overlay"></div>
 
 <!-- begin popup popup_narrow  -->
+<div class="popup " id="popup-login">
+	<div class="popup__close">X</div>
+	<div class="popup__content">
+		<div class="popup__title">Login</div>
+		<div class="popup__inside">
+			<div class="errormess">Email or password is invalid</div>
+			<div class="input input_small is-error">
+				<input type="text" name="" placeholder="ex. Max Power" id="">
+				<i class="input__icon icon-user"></i>
+			</div>
+			<div class="input input_small">
+				<input type="password" name="" placeholder="ex. Max Power" id="">
+				<i class="input__icon icon-lock"></i>
+			</div>
+			<div class="rememberme">
+				<label class="field field_check">
+					<div class="checkbox">
+						<input type="checkbox" name="asd" id="asd"><i></i>
+					</div>
+					<div class="label">Remember me</div>
+				</label>
+				<div class="forgotpassword"><a href="#">Forgot your password?</a></div>
+			</div>
+			<div class="donthave">
+				Don't have an account? <a href="#" class="js-popup" data-popup="popup-signup">Sign up</a>
+			</div>
+		</div>
+		<div class="submit">Login</div>
+	</div>
+
+</div>
+<!-- end popup  -->
+
+
+<!-- begin popup   -->
 <div class="popup " id="popup-signup">
 	<div class="popup__close">X</div>
 	<div class="popup__content">
-		<div class="popup__title">Sign up</div>
+		<div class="popup__title">Signup</div>
 		<div class="popup__inside">
 
-			<div class="signup">
-				<div class="signup__text">
-					Futurize your money with Cubits.
-				</div>
-				<div class="input input_icon ">
-					<input type="text" name="" placeholder="ex. Max Power" id="">
-					<i class="input__icon icon-mail"></i>
-				</div>
-			</div>
 
-
-
-			<div class="popup__bottom">
-				Already have an account? <a href="#">Login</a>
-			</div>
 		</div>
-		<div class="submit js-popup" data-popup="popup-success">Create cubits wallet</div>
+		<div class="resend">succes</div>
 	</div>
 </div>
 <!-- end popup  -->
