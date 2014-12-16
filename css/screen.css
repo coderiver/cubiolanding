@@ -202,7 +202,9 @@ body.b-client { background: #fafafa; }
 .b-client .bottom .getstarted h3 { font-size: 25px; }
 
 footer { background: #f9fcfd; font-size: 21px; color: #455473; padding: 75px 0 20px; text-align: center; z-index: 1000; position: relative; color: #353558; }
+footer.nobg { background: transparent; }
 footer a { color: #1ebebb; text-decoration: none; font-size: 80%; }
+footer span { display: block; text-align: center; font-size: 80%; margin-bottom: 15px; }
 
 .overlay { position: absolute; top: 0px; background: #768395; opacity: 0.9; bottom: 0; right: 0; left: 0; z-index: 1000; display: none; position: fixed; }
 
